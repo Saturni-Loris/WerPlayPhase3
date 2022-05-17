@@ -1,0 +1,31 @@
+<template>
+  <div class="pt-12 p-3">
+    <card />
+  </div>
+
+<div class="pt-12 p-3">
+    <card />
+  </div>
+
+  <div class="pt-12 p-3">
+    <card />
+  </div>
+</template>
+
+<script>
+import card from "../components/card.vue";
+export default {
+  components: { card },
+  name: "MatchspopulaireView",
+  data() {
+    return {};
+  },
+};
+</script>
+
+<style scoped>
+</style>
+
+
+
+

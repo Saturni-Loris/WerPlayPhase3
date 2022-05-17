@@ -9,6 +9,12 @@ module.exports = {
         inter: 'Inter',
       },
     },
+
+    colors: {
+      'orangewerplay': '#D96930',
+    }
   },
   plugins: [],
 }
+
+
