@@ -1,4 +1,6 @@
 <template>
+      <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Matchs</span> et <span class="text-orangewerplay">lieux</span> les plus répandus</h1>
+
   <div class="pt-12 p-3">
     <card />
   </div>

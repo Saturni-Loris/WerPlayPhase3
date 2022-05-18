@@ -66,8 +66,9 @@ i {
 
 /* Custom des liens de navigation */
 nav .navbar-nav a {
-    color: lightgray !important;
+    color: #D96930 !important;
     text-decoration: none;
+    font-weight: 500;
 }
 
 nav .navbar-brand a {

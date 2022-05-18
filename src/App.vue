@@ -28,48 +28,30 @@ import Card from "./components/card.vue";
         <ul class="navbar-nav ">
           <li class="nav-item ">
             <div class="nav-link">
-              <RouterLink to="/films">Créer un match</RouterLink>
+              <RouterLink to="/creermatch">Créer un match</RouterLink>
             </div>
           </li>
+        <hr class="my-2 border-t-2 text-gray-400" />
           <li class="nav-item">
             <div class="nav-link">
               <RouterLink to="/matchspopulaire">Matchs populaire</RouterLink>
             </div>
           </li>
+                  <hr class="my-2 border-t-2 text-gray-400" />
+
           <li class="nav-item">
             <div class="nav-link">
-              <RouterLink to="/kids">Contact</RouterLink>
+              <RouterLink to="/contact">Contact</RouterLink>
             </div>
           </li>
+                  <hr class="my-2 border-t-2 text-gray-400" />
+
         </ul>
 
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Administration
-            </a>
-            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-              <div class="dropdown-item">
-                <RouterLink to="/videos">Fonctionnalitées</RouterLink>
-              </div>
-
-              <div class="dropdown-item">
-                <RouterLink to="/videos">Paramètres</RouterLink>
-              </div>
-            </div>
-          </li>
-        </ul>
+        
       </div>
+      
     </nav>
-      <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Matchs</span> et <span class="text-orangewerplay">lieux</span> les plus répandus</h1>
     <RouterView />
   </div>
 
