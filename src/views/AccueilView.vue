@@ -20,7 +20,7 @@
     <div class="md:flex md:items-center -mt-16 pl-8">
     <div class="">
       <button class="  bg-orangewerplay  text-white font-bold py-2 px-16 rounded-2xl" type="button">
-        Ecrivez-nous
+        <RouterLink to="/contact">Ecrivez nous</RouterLink>
       </button>
     </div>
     <div class="md:w-2/3"></div>
@@ -86,8 +86,9 @@
 
             <div class="md:flex md:items-center  p-8">
     <div class="">
+      
       <button class="  bg-orangewerplay  text-white font-bold py-2 px-16 rounded-2xl" type="button">
-        Rejoindre un match
+        <RouterLink to="/matchspopulaire">Rejoindre un match</RouterLink>
       </button>
     </div>
     <div class="md:w-2/3"></div>
