@@ -102,7 +102,7 @@ import Card from "./components/card.vue";
             md:justify-start
           ">
           
-        <img class="w-16" src="../src/assets/logoWerplayblanc.svg" alt="">
+        <RouterLink to="/"><img class="w-16" src="../src/assets/logoWerplayblanc.svg" alt=""></RouterLink>
         </h6>
       </div>
       <div class="">
@@ -114,7 +114,7 @@ import Card from "./components/card.vue";
         </p>
 
         <p class="mb-4">
-          <a href="#!" class="text-gray-600">Mentions légales</a>
+          <a href="#!" class="text-gray-600"><RouterLink to="/mentions">Mentions</RouterLink></a>
         </p>
         
       </div>
@@ -127,7 +127,7 @@ import Card from "./components/card.vue";
         </p>
 
         <p class="mb-4">
-          <a href="#!" class="text-gray-600">Fondateurs</a>
+          <a href="#!" class="text-gray-600"><RouterLink to="/fondateurs">Fondateurs</RouterLink></a>
         </p>
         
       </div>

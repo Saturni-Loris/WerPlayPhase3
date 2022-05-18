@@ -1,5 +1,5 @@
 <template>
-      <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Fonctionnalitees</span> </h1>
+      <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Fondateurs</span> </h1>
 
 </template>
 
@@ -7,7 +7,7 @@
 import card from "../components/card.vue";
 export default {
   components: { card },
-  name: "FonctionnaliteesView",
+  name: "FondateursView",
   data() {
     return {};
   },

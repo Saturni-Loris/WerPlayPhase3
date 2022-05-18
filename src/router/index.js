@@ -5,6 +5,9 @@ import ContactView from '../views/ContactView.vue'
 import CreermatchView from '../views/CreermatchView.vue'
 import FonctionnaliteesView from '../views/FonctionnaliteesView.vue'
 import ParametreView from '../views/ParametreView.vue'
+import MentionsView from '../views/MentionsView.vue'
+import FondateursView from '../views/FondateursView.vue'
+
 
 import card from '../components/card.vue'
 import formulaire from '../components/formulaire.vue'
@@ -27,6 +30,8 @@ const router = createRouter({
     { path: '/creermatch', name: 'CreermatchView', component: CreermatchView },
     { path: '/fonctionnalitees', name: 'FonctionnaliteesView', component: FonctionnaliteesView },
     { path: '/parametre', name: 'BathParametreView', component: ParametreView },
+    { path: '/mentions', name: 'MentionsView', component: MentionsView },
+    { path: '/fondateurs', name: 'FondateursView', component: FondateursView },
 
 
     { path: '/card', name: 'card', component: card },
