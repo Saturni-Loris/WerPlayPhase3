@@ -6,18 +6,21 @@
   </div>
 
 <div class="pt-12 p-3">
-    <card />
+    <card2 />
   </div>
 
   <div class="pt-12 p-3">
-    <card />
+    <card3 />
   </div>
 </template>
 
 <script>
 import card from "../components/card.vue";
+import card2 from "../components/card2.vue";
+import card3 from "../components/card3.vue";
+
 export default {
-  components: { card },
+  components: { card, card2, card3 },
   name: "MatchspopulaireView",
   data() {
     return {};

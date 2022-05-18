@@ -1,4 +1,5 @@
 <template>
+
     <div class="pb-12">
         <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Bienvenue</span> sur <span class="text-orangewerplay">WerPlay</span></h1>
         <h1 class="pr-8 pl-8 text-sm font-medium">Ici, tu pourras jouer à des sports co' quand tu veux. Avec qui tu veux et quand tu veux! Football, Basket ou encore Volley, WerPlay te permettra de créer ou rejoindre des matchs sans prises de têtes.</h1>
@@ -107,8 +108,11 @@
 
 <script>
 import card from "../components/card.vue";
+import card from "../components/card2.vue";
+import card from "../components/card3.vue";
+
 export default {
-  components: { card },
+  components: { card, card2, card3 },
   name: "MatchspopulaireView",
   data() {
     return {};
