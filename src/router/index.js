@@ -10,6 +10,7 @@ import card from '../components/card.vue'
 import formulaire from '../components/formulaire.vue'
 
 
+
 import BathView from '../views/Bath.vue'
 
 

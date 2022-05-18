@@ -1,0 +1,22 @@
+<template>
+      <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Fonctionnalitees</span> et <span class="text-orangewerplay">lieux</span> les plus répandus</h1>
+
+</template>
+
+<script>
+import card from "../components/card.vue";
+export default {
+  components: { card },
+  name: "FonctionnaliteesView",
+  data() {
+    return {};
+  },
+};
+</script>
+
+<style scoped>
+</style>
+
+
+
+

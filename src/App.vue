@@ -110,7 +110,7 @@ import Card from "./components/card.vue";
           WerPlay
         </h6>
         <p class="mb-4">
-          <a href="#!" class="text-gray-600">Fonctionnalitées</a>
+          <a href="" class="text-gray-600"><RouterLink to="/fonctionnalitees">Fonctionnalitées</RouterLink></a>
         </p>
 
         <p class="mb-4">
@@ -123,7 +123,7 @@ import Card from "./components/card.vue";
           Assistance
         </h6>
         <p class="mb-4">
-          <a href="#!" class="text-gray-600">Contact</a>
+          <a href="" class="text-gray-600"><RouterLink to="/contact">Contact</RouterLink></a>
         </p>
 
         <p class="mb-4">
