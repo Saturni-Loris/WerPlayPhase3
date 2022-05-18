@@ -3,7 +3,7 @@
     <img
       class="rounded-t-lg"
       src="../assets/basket_photo.png"
-      alt="Image maison"
+      alt="Image basket"
     />
     <figcaption class="relative rounded-b-lg border-x-2 border-b-2 px-5 py-7">
       <div class="relative flex flex-col">
