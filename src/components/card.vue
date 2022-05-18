@@ -5,17 +5,17 @@
       src="../assets/basket_photo.png"
       alt="Image basket"
     />
-    <figcaption class="relative rounded-b- border-x-2 border-b-2 border-griswerplay px-5 py-7 ">
+    <figcaption class="relative rounded-b- border-x-2 border-b-2 border-griswerplay px-4 py-8 ">
       <div class="relative flex flex-col">
-        <div class="order-first flex items-center pb-1">
-          <h3 class="pr-4 text-2xl font-bold leading-8 text-red-600">
+        <div class="order-first flex items-center pb-4">
+          <h3 class="pr-4 text-2xl font-bold leading-8 text-rougewerplay ">
             Montbéliard, 25200
           </h3>
           <etoilevide />
 
-          <coeur />
-          <coeur />
-          <coeur />
+          <etoile />
+          <etoile />
+          <etoile />
         </div>
         <h3 class="text-m mr-1 font-semibold leading-8 text-gray-400 underline">
           S’y rendre
@@ -39,9 +39,11 @@
 import Football from "./Football.vue";
 import Basket from "./Basket.vue";
 import Volley from "./Volley.vue";
+import Etoile from "./Etoile.vue";
+import Etoilevide from "./Etoilevide.vue";
 
 export default {
-  components: { Football, Basket, Volley },
+  components: { Football, Basket, Volley, Etoile, Etoilevide },
 };
 </script>
 

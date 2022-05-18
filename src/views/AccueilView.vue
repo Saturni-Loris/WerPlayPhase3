@@ -12,7 +12,7 @@
         <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Des question</span> ? </h1>
 
         <img
-      class=""
+      class="grid place-items-center"
       src="../assets/desquestionsphotos.png"
       alt="Image foot"
     />
@@ -77,7 +77,7 @@
 
     <div class="grid place-items-center">
         <img
-      class=""
+      class="p-8"
       src="../assets/basketpanier.png"
       alt="Image foot" 
     /></div>

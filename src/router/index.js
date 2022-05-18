@@ -14,7 +14,6 @@ import formulaire from '../components/formulaire.vue'
 
 
 
-import BathView from '../views/Bath.vue'
 
 
 
@@ -38,7 +37,6 @@ const router = createRouter({
     { path: '/formulaire', name: 'formulaire', component: formulaire },
 
 
-    { path: '/bath', name: 'BathView', component: BathView },
 
 
   ]
