@@ -7,6 +7,7 @@ import FonctionnaliteesView from '../views/FonctionnaliteesView.vue'
 import ParametreView from '../views/ParametreView.vue'
 import MentionsView from '../views/MentionsView.vue'
 import FondateursView from '../views/FondateursView.vue'
+import MapsView from '../views/MapsView.vue'
 
 
 import card from '../components/card.vue'
@@ -34,6 +35,7 @@ const router = createRouter({
     { path: '/parametre', name: 'BathParametreView', component: ParametreView },
     { path: '/mentions', name: 'MentionsView', component: MentionsView },
     { path: '/fondateurs', name: 'FondateursView', component: FondateursView },
+    { path: '/maps', name: 'MapsView', component: MapsView },
 
 
     { path: '/card', name: 'card', component: card },

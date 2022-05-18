@@ -6,7 +6,7 @@ import Card from "./components/card.vue";
 <template>
   <div class="">
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white border-b-2 border-orangewerplay">
       <div class="navbar-brand">
         <RouterLink to="/"
           ><img src="../src/assets/logoWerplay.svg"
@@ -46,6 +46,11 @@ import Card from "./components/card.vue";
           </li>
                   <hr class="my-2 border-t-2 text-gray-400" />
 
+          <li class="nav-item">
+            <div class="nav-link">
+              <RouterLink to="/maps">Maps</RouterLink>
+            </div>
+          </li>
         </ul>
 
         
@@ -114,7 +119,11 @@ import Card from "./components/card.vue";
         </p>
 
         <p class="mb-4">
-          <a href="#!" class="text-gray-600"><RouterLink to="/mentions">Mentions</RouterLink></a>
+          <a href="" class="text-gray-600"><RouterLink to="/maps">Maps</RouterLink></a>
+        </p>
+
+        <p class="mb-4">
+          <a href="#!" class="text-gray-600"><RouterLink to="/mentions">Mentions légales</RouterLink></a>
         </p>
         
       </div>

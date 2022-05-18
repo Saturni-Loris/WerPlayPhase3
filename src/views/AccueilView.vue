@@ -108,8 +108,8 @@
 
 <script>
 import card from "../components/card.vue";
-import card from "../components/card2.vue";
-import card from "../components/card3.vue";
+import card2 from "../components/card2.vue";
+import card3 from "../components/card3.vue";
 
 export default {
   components: { card, card2, card3 },
