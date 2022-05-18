@@ -7,6 +7,9 @@ import FonctionnaliteesView from '../views/FonctionnaliteesView.vue'
 import ParametreView from '../views/ParametreView.vue'
 
 import card from '../components/card.vue'
+import formulaire from '../components/formulaire.vue'
+
+
 import BathView from '../views/Bath.vue'
 
 
@@ -24,7 +27,11 @@ const router = createRouter({
     { path: '/fonctionnalitees', name: 'FonctionnaliteesView', component: FonctionnaliteesView },
     { path: '/parametre', name: 'BathParametreView', component: ParametreView },
 
+
     { path: '/card', name: 'card', component: card },
+    { path: '/formulaire', name: 'formulaire', component: formulaire },
+
+
     { path: '/bath', name: 'BathView', component: BathView },
 
 
