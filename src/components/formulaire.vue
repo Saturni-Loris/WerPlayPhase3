@@ -36,6 +36,7 @@
       <textarea class=" no-resize appearance-none block w-full text-gray-700 border-2 border-orangewerplay rounded py-3 px-4 mb-3 leading-tight  h-48 resize-none" id="message"></textarea>
     </div>
   </div>
+  
   <div class="md:flex md:items-center">
     <div class="">
       <button class="  bg-orangewerplay  text-white font-bold py-2 px-16 rounded" type="button">
@@ -46,16 +47,22 @@
   </div>
 
   <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full px-3">
-        <div class="flex justify-start items-center w-[474px] h-[100px] relative gap-[9px] p-2.5">
-        <div class="flex-grow-0 flex-shrink-0 w-2.5 h-2.5 rounded-[3px] border border-[#142435]"></div>
-        <p class="flex-grow w-[435px] text-xs text-left text-[#142435]">J’ai compris et j’accepte (1)</p>
+        <div class="w-full px-3">
+            <div class="flex flex-col ">
+            <div class="flex flex-col py-6">
+                    <label class="mt-1 inline-flex text-xs text-left  ">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 " checked /><span
+                        class="ml-2 "
+                        >J’ai compris et j’accepte (1)</span
+                    >
+                    </label>
+            </div>
+            </div>
         </div>
-        
       
       <p class="text-xs italic">(1) En communiquant mes informations, je consens à être recontacté par voie électronique par WerPlay. Ces données seront conservées durant 30 jours afin de pouvoir traiter au mieux ma demande. Je pourrai faire modifier ou supprimer mes informations sur simple demande. En savoir plus.</p>
-    </div>
-  </div>
+</div>
+  
 </form>
 
 
