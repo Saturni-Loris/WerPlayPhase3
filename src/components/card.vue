@@ -1,11 +1,11 @@
 <template>
-  <figure class="flex flex-col">
+  <figure class="flex flex-col ">
     <img
-      class="rounded-t-lg"
+      class="rounded-t-lg "
       src="../assets/basket_photo.png"
       alt="Image basket"
     />
-    <figcaption class="relative rounded-b-lg border-x-2 border-b-2 px-5 py-7">
+    <figcaption class="relative rounded-b- border-x-2 border-b-2 border-griswerplay px-5 py-7 ">
       <div class="relative flex flex-col">
         <div class="order-first flex items-center pb-1">
           <h3 class="pr-4 text-2xl font-bold leading-8 text-red-600">
@@ -21,7 +21,7 @@
           S’y rendre
         </h3>
         <h3 class="text-base leading-8 text-gray-400">7 Rue du Mont Bart</h3>
-        <hr class="my-2 border-t-2 text-gray-400" />
+        <hr class="my-2 border-griswerplay" />
         <div class="flex justify-between text-sm font-normal">
           <div><football class="inline-block align-top" /> Football</div>
           <div><basket class="inline-block align-top" /> Basket</div>

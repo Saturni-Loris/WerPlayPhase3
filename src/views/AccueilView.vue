@@ -73,6 +73,13 @@
   
 </form>
 
+    <div class="p-10">
+        <img
+      class=""
+      src="../assets/basketpanier.png"
+      alt="Image foot"
+    /></div>
+    
     <div class="pb-12">
             <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Et</span> maintenant ?</h1>
             <h1 class="pr-8 pl-8 text-sm font-medium">On attent quoi pour rejoindre un match ?</h1> 
@@ -85,7 +92,6 @@
     </div>
     <div class="md:w-2/3"></div>
   </div>
-    
     </div>
     
 
