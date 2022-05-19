@@ -13,14 +13,9 @@ import MapsView from '../views/MapsView.vue'
 import card from '../components/card.vue'
 import card2 from '../components/card2.vue'
 import card3 from '../components/card3.vue'
+import lireplus from '../components/lireplus.vue'
 
 import formulaire from '../components/formulaire.vue'
-
-
-
-
-
-
 
 
 
@@ -41,6 +36,8 @@ const router = createRouter({
     { path: '/card', name: 'card', component: card },
     { path: '/card2', name: 'card2', component: card2 },
     { path: '/card3', name: 'card3', component: card3 },
+    { path: '/lireplus', name: 'lireplus', component: lireplus },
+
 
     { path: '/formulaire', name: 'formulaire', component: formulaire },
 

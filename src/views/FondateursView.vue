@@ -59,13 +59,18 @@
           </div>
       </div>
 
+      <span class="grid place-items-center animate-bounce rounded-full p-4 bg-teal-400 text-white text-sm">
+        <lireplus/>
+    </span>
+
 
 </template>
 
 <script>
-import card from "../components/card.vue";
+import lireplus from "../components/lireplus.vue";
+
 export default {
-  components: { card },
+  components: { lireplus },
   name: "FondateursView",
   data() {
     return {};
