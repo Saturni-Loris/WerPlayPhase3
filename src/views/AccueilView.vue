@@ -10,20 +10,19 @@
     </div>
 
     <div class="pb-12">
-        <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Des question</span> ? </h1>
+        <h1 class="p-8 text-3xl font-bold text-left "><span class="text-orangewerplay">Des questions</span> ? </h1>
+      <div class="grid place-items-center ">
+        <img src="../assets/desquestionsphotos.png" alt="Image foot"/>
+      
 
-        <img
-      class="grid place-items-center"
-      src="../assets/desquestionsphotos.png"
-      alt="Image foot"
-    />
-
-    <div class="md:flex md:items-center -mt-16 pl-8">
-    <div class="">
+    <div class="md:flex  -mt-16 pr-40">
+    <div class="flex mb-3 text-xl font-semibold rounded-lg p-1">
       <button class="  bg-orangewerplay  text-white font-bold py-2 px-16 rounded-2xl" type="button">
         <RouterLink to="/contact">Ecrivez nous</RouterLink>
       </button>
     </div>
+</div>
+
     <div class="md:w-2/3"></div>
   </div>
     </div>

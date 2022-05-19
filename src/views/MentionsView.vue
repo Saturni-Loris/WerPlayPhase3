@@ -14,7 +14,7 @@ Arthur Meyer - 07 60 38 72 51
 Loris Saturni - 06 69 49 59 99
 
 Asma Es-Sabbar - 07 60 38 72 51
-</h1>
+        </h1>
                   <hr class="my-2 border-t-2 text-gray-400" />
 
         <h1 class="p-8 text-3xl font-bold"><span class="text-orangewerplay">Hébergeur</span> </h1>
