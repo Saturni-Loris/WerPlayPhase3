@@ -13,7 +13,7 @@
       <card
         rue="Avenue de Marc"
         adresse="Montbéliard"
-        image="/public/dunkbasket.png"
+        image="/public/amifoot.png"
       />
     </div>
 
@@ -21,7 +21,7 @@
       <card
         rue="30 rue etienne michen"
         adresse="Valentigney"
-        image="/public/dunkbasket.png"
+        image="/public/basket.png"
       />
     </div>
 
@@ -29,23 +29,19 @@
       <card
         rue="Rue de la Paix"
         adresse="Voujeaucourt"
-        image="/public/dunkbasket.png"
+        image="/public/city.png"
       />
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Rue Machéral"
-        adresse="Trevenans"
-        image="/public/dunkbasket.png"
-      />
+      <card rue="Rue Machéral" adresse="Trevenans" image="/public/basket.png" />
     </div>
 
     <div class="p-3 pt-12">
       <card
         rue="Avenue de l'église"
         adresse="Seloncourt"
-        image="/public/dunkbasket.png"
+        image="/public/metundunk.png"
       />
     </div>
 
@@ -53,7 +49,7 @@
       <card
         rue="Rue de la Moule"
         adresse="Bart"
-        image="/public/dunkbasket.png"
+        image="/public/panierbasket.png"
       />
     </div>
 
@@ -61,7 +57,7 @@
       <card
         rue="Avenue des fleurs"
         adresse="Audincourt"
-        image="/public/dunkbasket.png"
+        image="/public/panierdebasket.png"
       />
     </div>
 
@@ -69,19 +65,23 @@
       <card
         rue="Avenue de l'aveugle"
         adresse="Héricourt"
-        image="/public/dunkbasket.png"
+        image="/public/amifoot.png"
       />
     </div>
 
     <div class="p-3 pt-12">
-      <card rue="Rue-Haute" adresse="Delle" image="/public/dunkbasket.png" />
+      <card
+        rue="Rue-Haute"
+        adresse="Delle"
+        image="/public/tapeballedefoot.png"
+      />
     </div>
 
     <div class="p-3 pt-12">
       <card
         rue="Avenue Basse"
         adresse="Courcelle"
-        image="/public/citylure.png"
+        image="/public/passefoot.png"
       />
     </div>
   </div>
