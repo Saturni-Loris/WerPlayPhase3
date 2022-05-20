@@ -11,12 +11,38 @@
     </h1>
   </div>
 
-  <div class="p-3">
-    <card />
+  <div
+    class="
+      grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
+    "
+  >
+    <div class="p-3 pt-12">
+      <card
+        rue="Avenue de l'église"
+        adresse="Seloncourt"
+        image="/public/metundunk.png"
+      />
+    </div>
+
+    <div class="p-3 pt-12">
+      <card
+        rue="Rue de la Moule"
+        adresse="Bart"
+        image="/public/panierbasket.png"
+      />
+    </div>
+
+    <div class="p-3 pt-12">
+      <card
+        rue="Avenue des fleurs"
+        adresse="Audincourt"
+        image="/public/panierdebasket.png"
+      />
+    </div>
   </div>
 
   <div class="pb-12">
-    <h1 class="p-8 text-left text-3xl font-bold">
+    <h1 class="p-8 text-3xl font-bold">
       <span class="text-orangewerplay">Des questions</span> ?
     </h1>
     <div class="grid place-items-center">
@@ -170,7 +196,7 @@ import card from "../components/card.vue";
 
 export default {
   components: { card },
-  name: "MatchspopulaireView",
+  name: "Accueil View",
   data() {
     return {};
   },

@@ -12,12 +12,10 @@
         xl:grid-cols-4
       "
     >
-      <div class="relative cursor-pointer overflow-hidden rounded-lg shadow-lg">
-        <img
-          class="w-full rounded-t-3xl object-cover"
-          :src="image"
-          alt="sport"
-        />
+      <div
+        class="relative cursor-pointer overflow-hidden rounded-t-3xl shadow-lg"
+      >
+        <img class="-3xl w-full object-cover" :src="image" alt="sport" />
 
         <div class="absolute bottom-0 right-0 px-6 py-4">
           <h4
@@ -44,13 +42,7 @@
     </div>
 
     <figcaption
-      class="
-        rounded-b-
-        relative
-        border-x-2 border-b-2 border-griswerplay
-        px-4
-        py-8
-      "
+      class="relative border-x-2 border-b-2 border-griswerplay px-4 py-8"
     >
       <div class="relative flex flex-col">
         <div class="order-first flex items-center pb-4">
