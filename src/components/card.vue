@@ -14,9 +14,9 @@
     >
       <div class="relative cursor-pointer overflow-hidden rounded-lg shadow-lg">
         <img
-          class="w-full object-cover"
-          src="../assets/basket_photo.png"
-          alt="Flower and sky"
+          class="w-full rounded-t-3xl object-cover"
+          :src="image"
+          alt="sport"
         />
 
         <div class="absolute bottom-0 right-0 px-6 py-4">
@@ -55,13 +55,13 @@
       <div class="relative flex flex-col">
         <div class="order-first flex items-center pb-4">
           <h3 class="pr-8 text-2xl font-bold leading-8 text-rougewerplay">
-            Montbéliard, 25200
+            {{ adresse }}
           </h3>
         </div>
         <h3 class="text-m text-gray-400 mr-1 font-semibold leading-8 underline">
           S’y rendre
         </h3>
-        <h3 class="text-gray-400 text-base leading-8">Rue du Mont Bart</h3>
+        <h3 class="text-gray-400 text-base leading-8">{{ rue }}</h3>
         <hr class="my-2 border-griswerplay" />
         <div class="flex justify-between text-sm font-normal">
           <div><football class="inline-block align-top" /> Football</div>
@@ -85,6 +85,11 @@ import Etoilevide from "./Etoilevide.vue";
 
 export default {
   components: { Football, Basket, Volley, Etoile, Etoilevide },
+  props: {
+    image: String,
+    rue: String,
+    adresse: String,
+  },
 };
 </script>
 
