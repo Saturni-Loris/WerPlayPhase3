@@ -10,79 +10,90 @@
     "
   >
     <div class="p-3 pt-12">
-      <card
-        rue="Avenue de Marc"
-        adresse="Montbéliard"
-        image="/public/amifoot.png"
-      />
+      <RouterLink to="/montbeliard"
+        ><card
+          rue="Avenue de Marc"
+          adresse="Montbéliard"
+          image="/public/amifoot.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="30 rue etienne michen"
-        adresse="Valentigney"
-        image="/public/basket.png"
-      />
+      <RouterLink to="/valentigney">
+        <card
+          rue="30 rue etienne michen"
+          adresse="Valentigney"
+          image="/public/basket.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Rue de la Paix"
-        adresse="Voujeaucourt"
-        image="/public/city.png"
-      />
+      <RouterLink to="/Voujeaucourt">
+        <card
+          rue="Rue de la Paix"
+          adresse="Voujeaucourt"
+          image="/public/city.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card rue="Rue Machéral" adresse="Trevenans" image="/public/basket.png" />
+      <RouterLink to="/trevenans">
+        <card rue="Rue Machéral" adresse="Trevenans" image="/public/basket.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Avenue de l'église"
-        adresse="Seloncourt"
-        image="/public/metundunk.png"
-      />
+      <RouterLink to="/seloncourt">
+        <card
+          rue="Avenue de l'église"
+          adresse="Seloncourt"
+          image="/public/metundunk.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Rue de la Moule"
-        adresse="Bart"
-        image="/public/panierbasket.png"
-      />
+      <RouterLink to="/bart">
+        <card
+          rue="Rue de la Moule"
+          adresse="Bart"
+          image="/public/panierbasket.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Avenue des fleurs"
-        adresse="Audincourt"
-        image="/public/panierdebasket.png"
-      />
+      <RouterLink to="/audincourt">
+        <card
+          rue="Avenue des fleurs"
+          adresse="Audincourt"
+          image="/public/panierdebasket.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Avenue de l'aveugle"
-        adresse="Héricourt"
-        image="/public/amifoot.png"
-      />
+      <RouterLink to="/hericourt">
+        <card
+          rue="Avenue de l'aveugle"
+          adresse="Héricourt"
+          image="/public/amifoot.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Rue-Haute"
-        adresse="Delle"
-        image="/public/tapeballedefoot.png"
-      />
+      <RouterLink to="/delle">
+        <card
+          rue="Rue-Haute"
+          adresse="Delle"
+          image="/public/tapeballedefoot.png"
+      /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Avenue Basse"
-        adresse="Courcelle"
-        image="/public/passefoot.png"
-      />
+      <RouterLink to="/courcelle">
+        <card
+          rue="Avenue Basse"
+          adresse="Courcelle"
+          image="/public/passefoot.png"
+      /></RouterLink>
     </div>
   </div>
 </template>

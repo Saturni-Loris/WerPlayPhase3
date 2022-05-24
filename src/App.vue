@@ -50,12 +50,6 @@ import Card from "./components/card.vue";
             </div>
           </li>
           <hr class="text-gray-400 my-2 border-t-2" />
-
-          <li class="nav-item">
-            <div class="nav-link">
-              <RouterLink to="/maps">Maps</RouterLink>
-            </div>
-          </li>
         </ul>
       </div>
     </nav>
