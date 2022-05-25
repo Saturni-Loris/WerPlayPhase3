@@ -50,6 +50,39 @@ import Card from "./components/card.vue";
             </div>
           </li>
           <hr class="text-gray-400 my-2 border-t-2" />
+
+          <li class="nav-item">
+            <a class="nav-link" href="pages/monCompte.html">Mon Compte</a>
+          </li>
+        </ul>
+
+        <hr class="text-gray-400 my-2 border-t-2" />
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Administration
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="pages/client/liste.html"
+                >Clients</a
+              >
+
+              <hr class="text-gray-400 my-2 border-t-2" />
+
+              <a class="dropdown-item" href="pages/abonnement/liste.html"
+                >Abonnements</a
+              >
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
