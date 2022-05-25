@@ -7,6 +7,7 @@
   <div
     class="
       grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
+      hover:no-underline
     "
   >
     <div class="p-3 pt-12">
@@ -21,7 +22,7 @@
     <div class="p-3 pt-12">
       <RouterLink to="/valentigney">
         <card
-          rue="30 rue etienne michen"
+          rue="30 rue etienne oehmichen"
           adresse="Valentigney"
           image="/public/basket.png"
       /></RouterLink>
