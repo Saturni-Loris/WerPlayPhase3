@@ -8,6 +8,8 @@ import ParametreView from '../views/ParametreView.vue'
 import MentionsView from '../views/MentionsView.vue'
 import FondateursView from '../views/FondateursView.vue'
 import MapsView from '../views/MapsView.vue'
+import MoncompteView from '../views/MoncompteView.vue'
+
 
 import MontbeliardView from '../views/villes/MontbeliardView.vue'
 import AudincourtView from '../views/villes/AudincourtView.vue'
@@ -40,6 +42,9 @@ const router = createRouter({
     { path: '/mentions', name: 'MentionsView', component: MentionsView },
     { path: '/fondateurs', name: 'FondateursView', component: FondateursView },
     { path: '/maps', name: 'MapsView', component: MapsView },
+    { path: '/moncompte', name: 'MoncompteView', component: MoncompteView },
+
+
     { path: '/montbeliard', name: 'MontbeliardView', component: MontbeliardView },
     { path: '/audincourt', name: 'AudincourtView', component: AudincourtView },
     { path: '/bart', name: 'BartView', component: BartView },
