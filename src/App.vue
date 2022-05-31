@@ -52,8 +52,11 @@ import Card from "./components/card.vue";
           <hr class="text-gray-400 my-2 border-t-2" />
 
           <li class="nav-item">
-            <a class="nav-link" href="pages/monCompte.html">Mon Compte</a>
+            <div class="nav-link">
+              <RouterLink to="/moncompte">Mon compte</RouterLink>
+            </div>
           </li>
+          <hr class="text-gray-400 my-2 border-t-2" />
         </ul>
 
         <hr class="text-gray-400 my-2 border-t-2" />
