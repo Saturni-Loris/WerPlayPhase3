@@ -14,7 +14,6 @@ import ListeView from '../views/admin/ListeView.vue'
 
 
 
-
 import MontbeliardView from '../views/villes/MontbeliardView.vue'
 import AudincourtView from '../views/villes/AudincourtView.vue'
 import BartView from '../views/villes/BartView.vue'
@@ -26,7 +25,8 @@ import TrevenansView from '../views/villes/TrevenansView.vue'
 import ValentigneyView from '../views/villes/ValentigneyView.vue'
 import VoujeaucourtView from '../views/villes/VoujeaucourtView.vue'
 
-
+import ListeParticipant from '../views/participant/ListeView.vue'
+import CreateParticipant from '../views/participant/CreateView.vue'
 
 import card from '../components/card.vue'
 
@@ -51,7 +51,8 @@ const router = createRouter({
 
     { path: '/ville', name: 'ListeView', component: ListeView },
 
-
+    { path: '/participants', name: 'ListeParticipant', component: ListeParticipant },
+    { path: '/createParticipant', name: 'CreateParticipant', component: CreateParticipant },
 
     { path: '/montbeliard', name: 'MontbeliardView', component: MontbeliardView },
     { path: '/audincourt', name: 'AudincourtView', component: AudincourtView },
