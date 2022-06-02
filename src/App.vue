@@ -58,6 +58,10 @@ import Card from "./components/card.vue";
               <RouterLink to="/moncompte">Mon compte</RouterLink>
             </div>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/chat">Chat</a>
+          </li>
         </ul>
 
         <hr class="text-gray-400 my-2 border-t-2" />
@@ -78,10 +82,6 @@ import Card from "./components/card.vue";
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="ville">Ville</a>
-
-              <div class="dropdown-item">
-                <RouterLink to="/participants">Participants</RouterLink>
-              </div>
             </div>
           </li>
         </ul>
