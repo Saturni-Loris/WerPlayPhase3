@@ -9,6 +9,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@heroicons/vue": "^1.0.6",
+    "mitt": "^3.0.0",
     "vue": "^3.2.31",
     "vue-router": "^4.0.15",
     "vue2-google-maps": "^0.10.7"

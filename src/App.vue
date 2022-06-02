@@ -4,7 +4,7 @@ import Card from "./components/card.vue";
 </script>
 
 <template>
-  <div class="">
+  <div>
     <nav
       class="
         navbar navbar-expand-lg navbar-dark
@@ -12,11 +12,13 @@ import Card from "./components/card.vue";
         border-b-2 border-orangewerplay
       "
     >
-      <div class="navbar-brand">
-        <RouterLink to="/"
-          ><img src="../src/assets/logoWerplay.svg"
-        /></RouterLink>
+      <div class="navbar-brand pl-2">
+        <span v-if="avatar != null" class="mr-3">
+          <img class="avatar" :src="avatar" />
+        </span>
+        <RouterLink to="/">{{ name }}</RouterLink>
       </div>
+
       <button
         class="navbar-toggler bg-orangewerplay"
         type="button"
@@ -32,7 +34,7 @@ import Card from "./components/card.vue";
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <div class="nav-link">
+            <div class="nav-link" v-if="isAdmin">
               <RouterLink to="/creermatch">Créer un match</RouterLink>
             </div>
           </li>
@@ -56,7 +58,6 @@ import Card from "./components/card.vue";
               <RouterLink to="/moncompte">Mon compte</RouterLink>
             </div>
           </li>
-          <hr class="text-gray-400 my-2 border-t-2" />
         </ul>
 
         <hr class="text-gray-400 my-2 border-t-2" />
@@ -71,6 +72,7 @@ import Card from "./components/card.vue";
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
+              v-if="isAdmin"
             >
               Administration
             </a>
@@ -84,6 +86,8 @@ import Card from "./components/card.vue";
               <a class="dropdown-item" href="pages/abonnement/liste.html"
                 >Abonnements</a
               >
+
+              <a class="dropdown-item" href="ville">Ville</a>
             </div>
           </li>
         </ul>
@@ -316,10 +320,129 @@ import Card from "./components/card.vue";
 @import "@/assets/style.css";
 </style>
 
+<style>
+/* Import Styles application */
+@import "@/assets/style.css";
+</style>
+
 <script>
+import { MenuIcon } from "@heroicons/vue/solid";
+import { emitter } from "../src/main";
+
+import {
+  getFirestore,
+  collection,
+  onSnapshot,
+  query,
+  where,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
+import {
+  getStorage,
+  ref,
+  getDownloadURL,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+
 export default {
-  components: { Card },
+  components: { Card, MenuIcon },
+
+  data() {
+    return {
+      user: {
+        email: null,
+        password: null,
+      },
+      userInfo: null,
+      name: "WerPlay",
+      avatar: null,
+      isAdmin: false,
+    };
+  },
+
+  mounted() {
+    this.getUserConnect();
+
+    emitter.on("connectUser", (e) => {
+      this.user = e.user;
+      //console.log("App => Rececption user connecté", this.user);
+      this.getUserInfo(this.user);
+    });
+
+    emitter.on("deConnectUser", (e) => {
+      this.user = e.user;
+      //console.log("App => Reception user déconnecté", this.user);
+      this.userInfo = null;
+      this.name = "Invité de WerPlay";
+      this.avatar = null;
+      this.isAdmin = false;
+    });
+  },
+  methods: {
+    // Obtenir les informations du user connecté
+    async getUserConnect() {
+      await getAuth().onAuthStateChanged(
+        function (user) {
+          if (user) {
+            // Récupération du user connecté
+            this.user = user;
+            // Recherche de ses infos complémentaires
+            this.getUserInfo(this.user);
+          }
+        }.bind(this)
+      );
+      // Noter le bind(this), cas des zones isolées
+      // lors de 2 strucutres imbiquées, Vue perd la visibilité
+      // des données
+      // On les ré injecte par le mot-clef this
+    },
+
+    async getUserInfo(user) {
+      // Rechercher les informations complémentaires de l'utilisateur
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document participant
+      const dbUsers = collection(firestore, "users");
+      // Recherche du user par son uid
+      const q = query(dbUsers, where("uid", "==", user.uid));
+      await onSnapshot(q, (snapshot) => {
+        this.userInfo = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        //console.log("userInfo", this.userInfo);
+        // userInfo étant un tableau, onn récupère
+        // ses informations dans la 1° cellule du tableau : 0
+        this.name = this.userInfo[0].login;
+        this.isAdmin = this.userInfo[0].admin;
+        // Recherche de l'image du user sur le Storage
+        const storage = getStorage();
+        // Référence du fichier avec son nom
+        const spaceRef = ref(storage, "users/" + this.userInfo[0].avatar);
+        getDownloadURL(spaceRef)
+          .then((url) => {
+            this.avatar = url;
+          })
+          .catch((error) => {
+            //console.log("erreur downloadUrl", error);
+          });
+      });
+    },
+  },
 };
 </script>
+
+<style>
+@import "../src/assets/style.css";
+
+.avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+</style>
+
 
 

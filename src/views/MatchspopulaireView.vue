@@ -12,10 +12,7 @@
   >
     <div class="p-3 pt-12">
       <RouterLink to="/montbeliard"
-        ><card
-          rue="Avenue de Marc"
-          adresse="Montbéliard"
-          image="/public/amifoot.png"
+        ><card rue="Avenue de Marc" adresse="Montbéliard" image="/amifoot.png"
       /></RouterLink>
     </div>
 
@@ -24,22 +21,19 @@
         <card
           rue="30 rue etienne oehmichen"
           adresse="Valentigney"
-          image="/public/basket.png"
+          image="/basket.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
       <RouterLink to="/Voujeaucourt">
-        <card
-          rue="Rue de la Paix"
-          adresse="Voujeaucourt"
-          image="/public/city.png"
+        <card rue="Rue de la Paix" adresse="Voujeaucourt" image="/city.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
       <RouterLink to="/trevenans">
-        <card rue="Rue Machéral" adresse="Trevenans" image="/public/basket.png"
+        <card rue="Rue Machéral" adresse="Trevenans" image="/basket.png"
       /></RouterLink>
     </div>
 
@@ -48,16 +42,13 @@
         <card
           rue="Avenue de l'église"
           adresse="Seloncourt"
-          image="/public/metundunk.png"
+          image="/metundunk.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
       <RouterLink to="/bart">
-        <card
-          rue="Rue de la Moule"
-          adresse="Bart"
-          image="/public/panierbasket.png"
+        <card rue="Rue de la Moule" adresse="Bart" image="/panierbasket.png"
       /></RouterLink>
     </div>
 
@@ -66,7 +57,7 @@
         <card
           rue="Avenue des fleurs"
           adresse="Audincourt"
-          image="/public/panierdebasket.png"
+          image="/panierdebasket.png"
       /></RouterLink>
     </div>
 
@@ -75,25 +66,19 @@
         <card
           rue="Avenue de l'aveugle"
           adresse="Héricourt"
-          image="/public/amifoot.png"
+          image="/amifoot.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
       <RouterLink to="/delle">
-        <card
-          rue="Rue-Haute"
-          adresse="Delle"
-          image="/public/tapeballedefoot.png"
+        <card rue="Rue-Haute" adresse="Delle" image="/tapeballedefoot.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
       <RouterLink to="/courcelle">
-        <card
-          rue="Avenue Basse"
-          adresse="Courcelle"
-          image="/public/passefoot.png"
+        <card rue="Avenue Basse" adresse="Courcelle" image="/passefoot.png"
       /></RouterLink>
     </div>
   </div>

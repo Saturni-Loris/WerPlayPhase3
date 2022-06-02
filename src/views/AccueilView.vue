@@ -20,23 +20,19 @@
       <card
         rue="Avenue de l'église"
         adresse="Seloncourt"
-        image="/public/metundunk.png"
+        image="/metundunk.png"
       />
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Rue de la Moule"
-        adresse="Bart"
-        image="/public/panierbasket.png"
-      />
+      <card rue="Rue de la Moule" adresse="Bart" image="/panierbasket.png" />
     </div>
 
     <div class="p-3 pt-12">
       <card
         rue="Avenue des fleurs"
         adresse="Audincourt"
-        image="/public/panierdebasket.png"
+        image="/panierdebasket.png"
       />
     </div>
   </div>
