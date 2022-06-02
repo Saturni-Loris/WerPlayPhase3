@@ -13,6 +13,8 @@ import MoncompteView from '../views/MoncompteView.vue'
 import ListeView from '../views/admin/ListeView.vue'
 
 
+
+
 import MontbeliardView from '../views/villes/MontbeliardView.vue'
 import AudincourtView from '../views/villes/AudincourtView.vue'
 import BartView from '../views/villes/BartView.vue'
@@ -48,6 +50,7 @@ const router = createRouter({
     { path: '/moncompte', name: 'MoncompteView', component: MoncompteView },
 
     { path: '/ville', name: 'ListeView', component: ListeView },
+
 
 
     { path: '/montbeliard', name: 'MontbeliardView', component: MontbeliardView },

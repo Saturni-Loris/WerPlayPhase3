@@ -21,10 +21,9 @@
             class="
               input-group-text
               text-white
-              border-jaune
-              bg-bleunuit
               rounded-l-lg
-              border-2
+              border-2 border-rougewerplay
+              bg-orangewerplay
             "
             >Nom de la nouvelle ville</span
           >
@@ -52,12 +51,12 @@
                     <span
                       class="
                         input-group-text
-                        text-white
-                        border-jaune
-                        bg-bleunuit
+                        bg-white
                         rounded-l-lg
-                        border-2
+                        border-2 border-orangewerplay
                         px-4
+                        font-semibold
+                        text-orangewerplay
                       "
                       >Filtrage</span
                     >
@@ -81,13 +80,12 @@
                         input-group-text
                         text-white
                         borde
-                        border-jaune
-                        bg-bleunuit
                         rounded-l-lg
-                        border-2
+                        border-2 border-rougewerplay
+                        bg-orangewerplay
                         px-4
                       "
-                      >Nom du ville</span
+                      >Nom de la ville</span
                     >
                   </div>
                   <input
