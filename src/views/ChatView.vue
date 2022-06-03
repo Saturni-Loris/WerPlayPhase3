@@ -52,16 +52,13 @@
           </div>
         </form>
 
-        <h5 class="text-dark text-base">
-          Vos fils de discussion avec: {{ userSelected.login }}
-        </h5>
         <div v-if="chat.length > 0">
           <table class="text-dark table">
             <tbody>
               <tr v-for="disc in chat" :key="disc.uid">
                 <div>
                   <td class="text-sm">
-                    {{ disc.libelle }} - créer par
+                    Discussion {{ disc.libelle }} - créer par
                     <span v-if="disc.fil[0] == user.uid">vous</span>
                     <span v-else>{{ userSelected.login }}</span>
                     le {{ dateFr(disc.creation) }}
@@ -99,13 +96,13 @@
           <h5>Discussion : {{ discussion.libelle }}</h5>
           <div class="input-group mb-3">
             <textarea
-              class="form-control msg"
+              class="form-control rounded-2xl border-2 border-orangewerplay"
               rows="3"
               placeholder="Message"
               v-model="message"
             ></textarea>
             <div class="input-group-prepend">
-              <button class="btn btn-dark" @click="sendMsg()">
+              <button class="btn btn-dark bg-orangewerplay" @click="sendMsg()">
                 <i class="fa fa-share-square fa-lg fa-2x"></i>
               </button>
             </div>
@@ -123,7 +120,7 @@
                     </div>
                   </div>
                   <div class="col-8 mb-1 text-center text-sm">
-                    <div class="border-2 border-orangewerplay">
+                    <div class="rounded-xl border-2 border-rougewerplay p-2">
                       <p>{{ msg.contenu }}</p>
                     </div>
                   </div>
@@ -131,7 +128,7 @@
 
                 <div class="row mb-3" v-if="msg.by == userSelected.uid">
                   <div class="col-8 text-center">
-                    <div class="w-70 bg-orangewerplay">
+                    <div class="rounded-xl bg-rougewerplay p-2">
                       <p>{{ msg.contenu }}</p>
                     </div>
                   </div>
