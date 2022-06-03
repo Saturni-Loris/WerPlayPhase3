@@ -13,10 +13,13 @@ import Card from "./components/card.vue";
       "
     >
       <div class="navbar-brand pl-2">
-        <span v-if="avatar != null" class="mr-3">
-          <img class="avatar" :src="avatar" />
-        </span>
-        <RouterLink to="/">{{ name }}</RouterLink>
+        <a href="/">
+          <img
+            src="/src/assets/logoWerplay.svg"
+            class="h-16"
+            alt="Werplay Logo"
+          />
+        </a>
       </div>
 
       <button
@@ -41,7 +44,7 @@ import Card from "./components/card.vue";
           <hr class="text-gray-400 my-2 border-t-2" />
           <li class="nav-item">
             <div class="nav-link">
-              <RouterLink to="/matchspopulaire">Matchs populaire</RouterLink>
+              <RouterLink to="/matchspopulaire">Matchs populaires</RouterLink>
             </div>
           </li>
           <hr class="text-gray-400 my-2 border-t-2" />
@@ -58,6 +61,7 @@ import Card from "./components/card.vue";
               <RouterLink to="/moncompte">Mon compte</RouterLink>
             </div>
           </li>
+          <hr class="text-gray-400 my-2 border-t-2" />
 
           <li class="nav-item">
             <a class="nav-link" href="/chat">Chat</a>
@@ -81,7 +85,20 @@ import Card from "./components/card.vue";
               Administration
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="flex items-center justify-center pb-5">
+                <span v-if="avatar != null" class="">
+                  <img class="avatar" :src="avatar" />
+                </span>
+                <RouterLink class="px-2 font-semibold" to="/"
+                  >Bonjour
+                  <span class="font-bold text-rougewerplay">{{
+                    name
+                  }}</span></RouterLink
+                >
+              </div>
+
               <a class="dropdown-item" href="ville">Ville</a>
+              <a class="dropdown-item" href="sport">Sport</a>
             </div>
           </li>
         </ul>
@@ -90,220 +107,183 @@ import Card from "./components/card.vue";
     <RouterView />
   </div>
 
-  <footer class="text-white bg-orangewerplay text-center lg:text-left">
-    <div
-      class="
-        border-gray-300
-        flex
-        items-center
-        justify-center
-        border-b
-        p-6
-        lg:justify-between
-      "
-    >
-      <div class="mr-12 hidden lg:block"></div>
-      <div class="flex justify-center">
-        <a
-          href="https://www.facebook.com/WerPlayPport/"
-          class="text-gray-600 mr-6"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fab"
-            data-icon="facebook-f"
-            class="w-4"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-          >
-            <path
-              fill="currentColor"
-              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-            ></path>
-          </svg>
-        </a>
-        <a
-          href="https://www.twitter.com/werplay_fr/"
-          class="text-gray-600 mr-6"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fab"
-            data-icon="twitter"
-            class="w-7"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              fill="currentColor"
-              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-            ></path>
-          </svg>
-        </a>
-        <a
-          href="https://www.instagram.com/werplaysport/"
-          class="text-gray-600 mr-6"
-        >
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fab"
-            data-icon="instagram"
-            class="w-6"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
-            <path
-              fill="currentColor"
-              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-            ></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="mx-6 py-10 text-center md:text-left">
-      <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        <div class="">
-          <h6
+  <footer class="text-white mt-5 bg-orangewerplay p-4 sm:p-6">
+    <div class="md:flex md:justify-between">
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+        <div>
+          <h2
             class="
-              mb-4
-              flex
-              items-center
-              justify-center
-              font-semibold
+              text-gray-900
+              dark:text-white
+              mb-6
+              text-sm
+              font-bold
               uppercase
-              md:justify-start
             "
           >
-            <RouterLink to="/"
-              ><img
-                class="w-16"
-                src="../src/assets/logoWerplayblanc.svg"
-                alt=""
-            /></RouterLink>
-          </h6>
+            WERPLAY
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a
+                href="fonctionnalitees"
+                class="
+                  hover:font-bold hover:text-rougewerplay hover:no-underline
+                "
+                >Fonctionnalitées</a
+              >
+            </li>
+            <li class="mb-4">
+              <a
+                href="maps"
+                class="
+                  hover:font-bold hover:text-rougewerplay hover:no-underline
+                "
+                >Maps</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="">
-          <h6
+        <div>
+          <h2
             class="
-              mb-4
-              flex
-              justify-center
-              font-semibold
+              text-gray-900
+              dark:text-white
+              mb-6
+              text-sm
+              font-bold
               uppercase
-              md:justify-start
             "
           >
-            WerPlay
-          </h6>
-          <p class="mb-4">
-            <a href="" class="text-gray-600"
-              ><RouterLink to="/fonctionnalitees"
-                >Fonctionnalitées</RouterLink
-              ></a
-            >
-          </p>
+            Contact
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a
+                href="contact"
+                class="
+                  hover:font-bold hover:text-rougewerplay hover:no-underline
+                "
+                >Nous contacter</a
+              >
+            </li>
+          </ul>
 
-          <p class="mb-4">
-            <a href="" class="text-gray-600"
-              ><RouterLink to="/maps">Maps</RouterLink></a
+          <div class="mt-4 flex space-x-6">
+            <a
+              href="#"
+              class="
+                text-gray-500
+                hover:text-jaune hover:font-semibold hover:no-underline
+              "
             >
-          </p>
-
-          <p class="mb-4">
-            <a href="#!" class="text-gray-600"
-              ><RouterLink to="/mentions">Mentions légales</RouterLink></a
-            >
-          </p>
-        </div>
-        <div class="">
-          <h6
-            class="
-              mb-4
-              flex
-              justify-center
-              font-semibold
-              uppercase
-              md:justify-start
-            "
-          >
-            Assistance
-          </h6>
-          <p class="mb-4">
-            <a href="" class="text-gray-600"
-              ><RouterLink to="/contact">Contact</RouterLink></a
-            >
-          </p>
-
-          <p class="mb-4">
-            <a href="#!" class="text-gray-600"
-              ><RouterLink to="/fondateurs">Fondateurs</RouterLink></a
-            >
-          </p>
-        </div>
-        <div class="">
-          <h6
-            class="
-              mb-4
-              flex
-              justify-center
-              font-semibold
-              uppercase
-              md:justify-start
-            "
-          >
-            Communauté
-          </h6>
-          <p class="mb-4 flex items-center justify-center md:justify-start">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="home"
-              class="mr-4 w-4"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 576 512"
-            >
-              <path
+              <svg
+                class="h-5 w-5 hover:font-bold hover:text-rougewerplay"
                 fill="currentColor"
-                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"
-              ></path>
-            </svg>
-            <a href="https://goo.gl/maps/NREXqYxHei6pWvAu9"
-              >4 Place Tharradin, 25200 Montbéliard</a
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="
+                text-gray-500
+                hover:text-jaune hover:font-semibold hover:no-underline
+              "
             >
-          </p>
-          <p class="mb-4 flex items-center justify-center md:justify-start">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="envelope"
-              class="mr-4 w-4"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path
+              <svg
+                class="h-5 w-5 hover:font-bold hover:text-rougewerplay"
                 fill="currentColor"
-                d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
-              ></path>
-            </svg>
-            <a href="mailto:werplay.contact@gmail.com"
-              >werplay.contact@gmail.com</a
-            >
-          </p>
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h2
+            class="
+              text-gray-900
+              dark:text-white
+              mb-6
+              text-sm
+              font-bold
+              uppercase
+            "
+          >
+            Legal
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a
+                href="/mentions"
+                class="
+                  hover:font-bold hover:text-rougewerplay hover:no-underline
+                "
+                >Mentions légales</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2
+            class="
+              text-gray-900
+              dark:text-white
+              mb-6
+              text-sm
+              font-bold
+              uppercase
+            "
+          >
+            ASSISTANCE
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a
+                href="/contact"
+                class="
+                  hover:font-bold hover:text-rougewerplay hover:no-underline
+                "
+                >Contact</a
+              >
+            </li>
+
+            <li class="mb-4">
+              <a
+                href="/fondateurs"
+                class="
+                  hover:font-bold hover:text-rougewerplay hover:no-underline
+                "
+                >Fondateurs</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div class="bg-gray-200 p-2 text-center">
-      <p>©2021 Loris Saturni | Arthur Meyer | Asma Es-Sabbar</p>
+
+      <div class="mb-12 md:mb-0">
+        <a href="/" class="flex items-center">
+          <img
+            src="/src/assets/logoWerplayblanc.svg"
+            class="h-16"
+            alt="Werplay Logo"
+          />
+        </a>
+      </div>
     </div>
   </footer>
 </template>
@@ -432,9 +412,9 @@ export default {
 
 .avatar {
   vertical-align: middle;
-  width: 70px;
+  width: 90px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: 5%;
 }
 </style>
 

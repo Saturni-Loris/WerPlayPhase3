@@ -2,7 +2,7 @@
   <div class="pb-12">
     <h1 class="p-8 text-3xl font-bold">
       <span class="text-orangewerplay">Bienvenue</span> sur
-      <span class="text-orangewerplay"></span>
+      <span class="text-orangewerplay">WERPLAY</span>
     </h1>
     <h1 class="pr-8 pl-8 text-sm font-medium">
       Ici, tu pourras jouer à des sports co' quand tu veux. Avec qui tu veux et

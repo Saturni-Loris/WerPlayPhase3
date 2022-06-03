@@ -11,6 +11,7 @@ import MapsView from '../views/MapsView.vue'
 import MoncompteView from '../views/MoncompteView.vue'
 
 import ListeView from '../views/admin/ListeView.vue'
+import SportView from '../views/admin/SportView.vue'
 
 
 
@@ -50,6 +51,8 @@ const router = createRouter({
     { path: '/moncompte', name: 'MoncompteView', component: MoncompteView },
 
     { path: '/ville', name: 'ListeView', component: ListeView },
+    { path: '/sport', name: 'SportView', component: SportView },
+
 
     { path: '/montbeliard', name: 'MontbeliardView', component: MontbeliardView },
     { path: '/audincourt', name: 'AudincourtView', component: AudincourtView },
