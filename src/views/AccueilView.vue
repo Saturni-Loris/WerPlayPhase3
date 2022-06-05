@@ -10,7 +10,6 @@
       créer ou rejoindre des matchs sans prises de têtes.
     </h1>
   </div>
-
   <div
     class="
       grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
