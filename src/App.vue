@@ -37,7 +37,7 @@ import Card from "./components/card.vue";
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <div class="nav-link">
+            <div class="nav-link" v-if="isAdmin">
               <RouterLink to="/terrain">Créer un match</RouterLink>
             </div>
           </li>

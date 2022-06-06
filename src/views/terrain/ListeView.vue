@@ -1,12 +1,6 @@
 <template>
   <div class="card my-4 mx-2">
-    <div v-if="user == null">
-      <h6 class="alert alert-warning text-center" role="alert">
-        Vous devez être connecté pour créer un match !!
-      </h6>
-    </div>
-
-    <div v-else class="card-header text-white bg-orangewerplay">
+    <div class="card-header text-white bg-orangewerplay">
       <h5>
         Liste des terrains de sports
         <span class="float-right" title="Créer un nouveau terrain">
@@ -51,6 +45,7 @@
       </table>
     </div>
   </div>
+
   <div class="pt-52"></div>
 </template>
 
