@@ -28,6 +28,18 @@ import VoujeaucourtView from '../views/villes/VoujeaucourtView.vue'
 
 import ChatView from '../views/ChatView.vue'
 
+//Participant
+import ListeParticipant from '../views/participant/ListeView.vue'
+import CreateParticipant from '../views/participant/CreateView.vue'
+import UpdateParticipant from '../views/participant/UpdateView.vue'
+import DeleteParticipant from '../views/participant/DeleteView.vue'
+
+//Participant
+import ListeTerrain from '../views/terrain/ListeView.vue'
+import CreateTerrain from '../views/terrain/CreateView.vue'
+import UpdateTerrain from '../views/terrain/UpdateView.vue'
+import DeleteTerrain from '../views/terrain/DeleteView.vue'
+
 
 import card from '../components/card.vue'
 
@@ -66,6 +78,18 @@ const router = createRouter({
     { path: '/voujeaucourt', name: 'VoujeaucourtView', component: VoujeaucourtView },
 
     { path: '/chat', name: 'ChatView', component: ChatView },
+
+    //Participant
+    { path: '/participants', name: 'ListeParticipant', component: ListeParticipant },
+    { path: '/createParticipant', name: 'CreateParticipant', component: CreateParticipant },
+    { path: '/UpdateParticipant/:id', name: 'UpdateParticipant', component: UpdateParticipant },
+    { path: '/DeleteParticipant/:id', name: 'DeleteParticipant', component: DeleteParticipant },
+
+    //terrain
+    { path: '/terrain', name: 'ListeTerrain', component: ListeTerrain },
+    { path: '/createTerrain', name: 'CreateTerrain', component: CreateTerrain },
+    { path: '/UpdateTerrain/:id', name: 'UpdateTerrain', component: UpdateTerrain },
+    { path: '/DeleteTerrain/:id', name: 'DeleteTerrain', component: DeleteTerrain },
 
 
     { path: '/card', name: 'card', component: card },

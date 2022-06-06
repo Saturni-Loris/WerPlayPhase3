@@ -37,8 +37,8 @@ import Card from "./components/card.vue";
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <div class="nav-link" v-if="isAdmin">
-              <RouterLink to="/creermatch">Créer un match</RouterLink>
+            <div class="nav-link">
+              <RouterLink to="/terrain">Créer un match</RouterLink>
             </div>
           </li>
           <hr class="text-gray-400 my-2 border-t-2" />
@@ -99,6 +99,10 @@ import Card from "./components/card.vue";
 
               <a class="dropdown-item" href="ville">Ville</a>
               <a class="dropdown-item" href="sport">Sport</a>
+
+              <div class="dropdown-item">
+                <RouterLink to="/participants">Participants</RouterLink>
+              </div>
             </div>
           </li>
         </ul>
