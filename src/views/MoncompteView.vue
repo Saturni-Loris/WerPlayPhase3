@@ -9,6 +9,9 @@
           CONNECTEZ
           <span class="text-jaune">-</span>VOUS
         </h1>
+        <p class="px-10 text-base font-semibold">
+          pour créer ou rejoindre un match.
+        </p>
       </div>
 
       <div class="input-group mb-3">
@@ -85,6 +88,71 @@
         </div>
       </div>
     </form>
+  </div>
+
+  <div class="flex items-center justify-center">
+    <div class="col-6">
+      <div class="card-header">
+        <h5 style="color: white">S'inscrire</h5>
+      </div>
+
+      <form>
+        <div class="card-body">
+          <div class="row">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Login</span>
+              </div>
+              <input class="form-control" placeholder="Login" required />
+            </div>
+
+            <div class="w-100 mb-3 text-center" v-if="imageData">
+              <img class="preview img-fluid" :src="imageData" />
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Photo</span>
+              </div>
+              <div class="custom-file">
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  ref="file"
+                  id="file"
+                  @change="previewImage"
+                />
+                <label class="custom-file-label" for="file"
+                  >Sélectionner l'image</label
+                >
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Email</span>
+              </div>
+              <input
+                class="form-control"
+                placeholder="Adresse mail"
+                type="email"
+                required
+              />
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Mot de passe</span>
+              </div>
+              <input class="form-control" placeholder="Mot de passe" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer text-center">
+          <button type="submit" class="btn btn-dark">Créer Compte</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 

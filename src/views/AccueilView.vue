@@ -179,7 +179,25 @@
           <RouterLink to="/matchspopulaire">Rejoindre un match</RouterLink>
         </button>
       </div>
-      <div class="md:w-2/3"></div>
+    </div>
+    <div class="flex flex-col items-center justify-center p-8">
+      <div class="">
+        <button
+          class="
+            rounded-2xl
+            border-2 border-orangewerplay
+            py-2
+            px-16
+            font-bold
+            text-orangewerplay
+            md:w-12
+            lg:w-52
+          "
+          type="button"
+        >
+          <RouterLink to="/terrain">Créer un match</RouterLink>
+        </button>
+      </div>
     </div>
   </div>
 </template> 
