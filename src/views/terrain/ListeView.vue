@@ -10,14 +10,14 @@
         <button
           class="
             text-white
+            md:w-62
             rounded-2xl
             bg-orangewerplay
             py-2
             px-16
             font-bold
             hover:no-underline
-            md:w-12
-            lg:w-52
+            lg:w-72
           "
           type="button"
         >

@@ -58,14 +58,16 @@ import Card from "./components/card.vue";
 
           <li class="nav-item">
             <div class="nav-link">
-              <RouterLink to="/moncompte">Mon compte</RouterLink>
+              <RouterLink to="/chat">Chat</RouterLink>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <div class="nav-link mx-2 rounded-md border-2 border-orangewerplay">
+              <RouterLink to="/moncompte">S'inscrire / Connecter</RouterLink>
             </div>
           </li>
           <hr class="text-gray-400 my-2 border-t-2" />
-
-          <li class="nav-item">
-            <a class="nav-link" href="/chat">Chat</a>
-          </li>
         </ul>
 
         <hr class="text-gray-400 my-2 border-t-2" />

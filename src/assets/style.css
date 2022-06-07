@@ -64,16 +64,17 @@ i {
     font-style: italic;
 }
 
+
 /* Custom des liens de navigation */
 nav .navbar-nav a {
     color: #D96930 !important;
-    text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 nav .navbar-brand a {
     color: lightgray !important;
     text-decoration: none;
+
 }
 
 html,
