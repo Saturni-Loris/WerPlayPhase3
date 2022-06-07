@@ -43,6 +43,7 @@
           placeholder="********"
         />
       </div>
+
       <div
         class="alert alert-warning mb-3 text-center"
         rold="alert"
@@ -91,68 +92,127 @@
   </div>
 
   <div class="flex items-center justify-center">
-    <div class="col-6">
-      <div class="card-header">
-        <h5 style="color: white">S'inscrire</h5>
+    <form
+      class="py-10 sm:mr-10 md:mr-10 xl:mr-10 2xl:mx-32"
+      @submit.prevent="onCnx()"
+    >
+      <div class="pb-12 pr-10">
+        <h1 class="px-10 text-3xl font-bold">S'INSCRIRE</h1>
+        <p class="px-10 text-base font-semibold">
+          pour créer ou rejoindre un match.
+        </p>
       </div>
 
-      <form>
-        <div class="card-body">
-          <div class="row">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Login</span>
-              </div>
-              <input class="form-control" placeholder="Login" required />
-            </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="text-white rounded-l-lg bg-orangewerplay px-4">
+            Email :
+          </button>
+        </div>
+        <input
+          class="form-control"
+          placeholder="ex: arthurpayacoco@gmail.com"
+          type="text"
+          v-model="user.email"
+          required
+        />
+      </div>
 
-            <div class="w-100 mb-3 text-center" v-if="imageData">
-              <img class="preview img-fluid" :src="imageData" />
-            </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span
+            class="
+              text-white
+              input-group-text
+              rounded-l-lg
+              bg-orangewerplay
+              px-4
+            "
+            >Login</span
+          >
+        </div>
+        <input class="form-control" placeholder="ArthurFoot68" required />
+      </div>
 
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Photo</span>
-              </div>
-              <div class="custom-file">
-                <input
-                  type="file"
-                  class="custom-file-input"
-                  ref="file"
-                  id="file"
-                  @change="previewImage"
-                />
-                <label class="custom-file-label" for="file"
-                  >Sélectionner l'image</label
-                >
-              </div>
-            </div>
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Email</span>
-              </div>
-              <input
-                class="form-control"
-                placeholder="Adresse mail"
-                type="email"
-                required
-              />
-            </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="text-white rounded-l-lg bg-orangewerplay px-4">
+            Mot de passe :
+          </button>
+        </div>
+        <input
+          class="form-control"
+          type="password"
+          v-model="user.password"
+          required
+          placeholder="********"
+        />
+      </div>
 
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text">Mot de passe</span>
-              </div>
-              <input class="form-control" placeholder="Mot de passe" required />
-            </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span
+            class="
+              input-group-text
+              text-white
+              rounded-l-lg
+              bg-orangewerplay
+              px-4
+            "
+            >Photo</span
+          >
+        </div>
+        <div class="custom-file">
+          <input
+            type="file"
+            class="custom-file-input"
+            ref="file"
+            id="file"
+            @change="previewImage"
+          />
+          <label class="custom-file-label" for="file"
+            >Sélectionner l'image</label
+          >
+        </div>
+      </div>
+
+      <div class="py-6">
+        <div
+          class="
+            flex flex-shrink-0 flex-grow-0
+            items-center
+            justify-center
+            pb-2
+          "
+        >
+          <div class="">
+            <button
+              class="text-white rounded bg-orangewerplay py-2 px-16 font-bold"
+              type="submit"
+            >
+              Connexion
+            </button>
           </div>
         </div>
 
-        <div class="card-footer text-center">
-          <button type="submit" class="btn btn-dark">Créer Compte</button>
+        <div class="flex flex-shrink-0 flex-grow-0 items-center justify-center">
+          <button
+            class="
+              font-base
+              rounded
+              border-2 border-orangewerplay
+              py-1
+              px-8
+              text-orangewerplay
+            "
+            @click="onDcnx()"
+            type="button"
+          >
+            Annuler
+          </button>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
 </template>
 
