@@ -61,13 +61,13 @@ import Card from "./components/card.vue";
               <RouterLink to="/chat">Chat</RouterLink>
             </div>
           </li>
+          <hr class="text-gray-400 my-2 border-t-2" />
 
           <li class="nav-item">
             <div class="nav-link mx-2 rounded-md border-2 border-orangewerplay">
               <RouterLink to="/moncompte">S'inscrire / Connecter</RouterLink>
             </div>
           </li>
-          <hr class="text-gray-400 my-2 border-t-2" />
         </ul>
 
         <hr class="text-gray-400 my-2 border-t-2" />

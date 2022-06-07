@@ -53,7 +53,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text text-white bg-orangewerplay"
-                    >Créé le</span
+                    >RDV le</span
                   >
                 </div>
                 <input

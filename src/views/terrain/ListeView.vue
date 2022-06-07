@@ -52,7 +52,7 @@
               <th scope="col">Adresse</th>
               <th scope="col">Ville</th>
               <th scope="col">Sport</th>
-              <th scope="col">Créé le</th>
+              <th scope="col">RDV le</th>
             </tr>
           </thead>
           <tbody>
