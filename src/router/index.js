@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AccueilView from '../views/AccueilView.vue'
 import MatchspopulaireView from '../views/MatchspopulaireView.vue'
 import ContactView from '../views/ContactView.vue'
-import CreermatchView from '../views/CreermatchView.vue'
 import FonctionnaliteesView from '../views/FonctionnaliteesView.vue'
 import ParametreView from '../views/ParametreView.vue'
 import MentionsView from '../views/MentionsView.vue'
@@ -14,7 +13,7 @@ import ListeView from '../views/admin/ListeView.vue'
 import SportView from '../views/admin/SportView.vue'
 
 
-
+//villes
 import MontbeliardView from '../views/villes/MontbeliardView.vue'
 import AudincourtView from '../views/villes/AudincourtView.vue'
 import BartView from '../views/villes/BartView.vue'
@@ -54,7 +53,6 @@ const router = createRouter({
     { path: '/', name: 'AccueilView', component: AccueilView },
     { path: '/matchspopulaire', name: 'MatchspopulaireView', component: MatchspopulaireView },
     { path: '/contact', name: 'ContactView', component: ContactView },
-    { path: '/creermatch', name: 'CreermatchView', component: CreermatchView, beforeEnter: guard },
     { path: '/fonctionnalitees', name: 'FonctionnaliteesView', component: FonctionnaliteesView },
     { path: '/parametre', name: 'BathParametreView', component: ParametreView },
     { path: '/mentions', name: 'MentionsView', component: MentionsView },
@@ -65,7 +63,7 @@ const router = createRouter({
     { path: '/ville', name: 'ListeView', component: ListeView },
     { path: '/sport', name: 'SportView', component: SportView },
 
-
+    //ville
     { path: '/montbeliard', name: 'MontbeliardView', component: MontbeliardView },
     { path: '/audincourt', name: 'AudincourtView', component: AudincourtView },
     { path: '/bart', name: 'BartView', component: BartView },

@@ -1,5 +1,10 @@
 <template>
   <div class="card my-4 mx-2">
+    <h1 class="text-dark p-8 text-3xl font-bold">
+      <span class="text-orangewerplay">Créer</span> votre
+      <span class="text-orangewerplay">1er match ici</span>
+    </h1>
+
     <div class="flex flex-col items-center justify-center p-8">
       <div class="">
         <button
@@ -10,6 +15,7 @@
             py-2
             px-16
             font-bold
+            hover:no-underline
             md:w-12
             lg:w-52
           "
