@@ -89,10 +89,7 @@ import Card from "./components/card.vue";
         <ul class="navbar-nav ml-auto">
           <div class="flex items-center justify-center">
             <RouterLink class="px-2 font-semibold" to="moncompte"
-              >Bonjour
-              <span class="font-bold text-rougewerplay">{{
-                name
-              }}</span></RouterLink
+              >Bonjour <span class="font-bold">{{ name }}</span></RouterLink
             >
             <span v-if="avatar != null" class="">
               <img class="avatar rounded-full" :src="avatar" />
@@ -281,6 +278,15 @@ import Card from "./components/card.vue";
           />
         </a>
       </div>
+    </div>
+    <div class="-mx-3 mb-6 flex flex-wrap">
+      <p class="text-xs italic">
+        WerPlay s’engage à ne prendre aucune responsabilité en cas de problème
+        sur un terrain. Les terrains sont publics, et n'appartiennent en aucun
+        cas au joueur ou à l'équipe WerPlay. En cas de terrain occupé lors de
+        votre arrivé, nous ne sommes, en aucun cas, pas responsables. Nous
+        écrire pour en savoir plus.
+      </p>
     </div>
   </footer>
 </template>

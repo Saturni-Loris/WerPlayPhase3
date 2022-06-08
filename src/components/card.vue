@@ -50,9 +50,13 @@
             {{ adresse }}
           </h3>
         </div>
-        <h3 class="text-m text-gray-400 mr-1 font-semibold leading-8 underline">
-          S’y rendre
-        </h3>
+        <a href="https://maps.google.fr">
+          <h3
+            class="text-m text-gray-400 mr-1 font-semibold leading-8 underline"
+          >
+            S’y rendre
+          </h3></a
+        >
         <h3 class="text-gray-400 text-base leading-8">{{ rue }}</h3>
         <hr class="my-2 border-griswerplay" />
         <div class="flex justify-between text-sm font-normal">

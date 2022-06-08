@@ -69,7 +69,6 @@
               <th scope="col">Ville</th>
               <th scope="col">Sport</th>
               <th scope="col">RDV le</th>
-
               <th scope="col">Age</th>
               <th scope="col">Difficulté</th>
             </tr>
