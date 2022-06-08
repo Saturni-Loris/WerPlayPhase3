@@ -46,7 +46,7 @@
       <div class="-mt-16 pr-40 md:flex">
         <div class="mb-3 flex rounded-lg p-1 text-xl font-semibold">
           <button
-            class="text-white rounded-2xl bg-orangewerplay py-2 px-16 font-bold"
+            class="bg-orangewerplay rounded-2xl py-2 px-16 font-bold text-white"
             type="button"
           >
             <RouterLink to="/contact">Ecrivez nous</RouterLink>
@@ -59,7 +59,7 @@
   </div>
 
   <div class="pb-4">
-    <h1 class="p-8 text-center text-3xl font-bold text-rougewerplay">
+    <h1 class="text-rougewerplay p-8 text-center text-3xl font-bold">
       Abonnes-toi pour ne rien manquer !
     </h1>
     <h1 class="pr-8 pl-8 text-center text-sm font-medium">
@@ -73,29 +73,30 @@
       <div class="">
         <label
           class="
-            text-gray-700
             mb-2
             block
             text-xs
             font-bold
             uppercase
             tracking-wide
+            text-gray-700
           "
         >
           E-mail*
         </label>
         <input
           class="
-            bg-gray-200
-            text-gray-700
+            border-orangewerplay
             mb-3
             block
             w-full
             appearance-none
             rounded
-            border-2 border-orangewerplay
+            border-2
+            bg-gray-200
             py-3
             px-4
+            text-gray-700
           "
           id="email"
           type="email"
@@ -109,13 +110,13 @@
       <div class="">
         <button
           class="
-            text-white
+            bg-orangewerplay
             float-right
             rounded-2xl
-            bg-orangewerplay
             py-2
             px-16
             font-bold
+            text-white
           "
           type="button"
         >
@@ -141,7 +142,7 @@
       </div>
     </div>
 
-    <p class="text-xs italic text-griswerplay">
+    <p class="text-griswerplay text-xs italic">
       (1) En communiquant mes informations, je consens à être recontacté par
       voie électronique par WerPlay. Ces données seront conservées durant 30
       jours afin de pouvoir traiter au mieux ma demande. Je pourrai faire
@@ -165,12 +166,12 @@
       <div class="">
         <button
           class="
-            text-white
-            rounded-2xl
             bg-orangewerplay
+            rounded-2xl
             py-2
             px-16
             font-bold
+            text-white
             md:w-12
             lg:w-52
           "
@@ -184,12 +185,13 @@
       <div class="">
         <button
           class="
+            border-orangewerplay
+            text-orangewerplay
             rounded-2xl
-            border-2 border-orangewerplay
+            border-2
             py-2
             px-16
             font-bold
-            text-orangewerplay
             md:w-12
             lg:w-52
           "

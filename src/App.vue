@@ -38,7 +38,7 @@ import Card from "./components/card.vue";
         <ul class="navbar-nav">
           <li class="nav-item">
             <div class="nav-link">
-              <RouterLink to="/terrain">Créer un match</RouterLink>
+              <RouterLink to="/participants">Créer un match</RouterLink>
             </div>
           </li>
           <hr class="text-gray-400 my-2 border-t-2" />
@@ -47,13 +47,7 @@ import Card from "./components/card.vue";
               <RouterLink to="/matchspopulaire">Matchs populaires</RouterLink>
             </div>
           </li>
-          <hr class="text-gray-400 my-2 border-t-2" />
 
-          <li class="nav-item">
-            <div class="nav-link">
-              <RouterLink to="/contact">Contact</RouterLink>
-            </div>
-          </li>
           <hr class="text-gray-400 my-2 border-t-2" />
 
           <li class="nav-item">
@@ -61,19 +55,10 @@ import Card from "./components/card.vue";
               <RouterLink to="/chat">Chat</RouterLink>
             </div>
           </li>
-          <hr class="text-gray-400 my-2 border-t-2" />
 
-          <li class="nav-item">
-            <div class="nav-link mx-2 rounded-md border-2 border-orangewerplay">
-              <RouterLink to="/moncompte">S'inscrire / Connecter</RouterLink>
-            </div>
-          </li>
-        </ul>
-
-        <hr class="text-gray-400 my-2 border-t-2" />
-
-        <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
+            <hr class="text-gray-400 my-2 border-t-2" />
+
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -87,26 +72,32 @@ import Card from "./components/card.vue";
               Administration
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <div class="flex items-center justify-center pb-5">
-                <span v-if="avatar != null" class="">
-                  <img class="avatar" :src="avatar" />
-                </span>
-                <RouterLink class="px-2 font-semibold" to="/"
-                  >Bonjour
-                  <span class="font-bold text-rougewerplay">{{
-                    name
-                  }}</span></RouterLink
-                >
-              </div>
-
               <a class="dropdown-item" href="ville">Ville</a>
               <a class="dropdown-item" href="sport">Sport</a>
+              <a class="dropdown-item" href="age">Age</a>
+              <a class="dropdown-item" href="difficulte">Difficulté</a>
 
               <div class="dropdown-item">
                 <RouterLink to="/participants">Participants</RouterLink>
               </div>
             </div>
           </li>
+        </ul>
+
+        <hr class="text-gray-400 my-2 border-t-2" />
+
+        <ul class="navbar-nav ml-auto">
+          <div class="flex items-center justify-center">
+            <RouterLink class="px-2 font-semibold" to="moncompte"
+              >Bonjour
+              <span class="font-bold text-rougewerplay">{{
+                name
+              }}</span></RouterLink
+            >
+            <span v-if="avatar != null" class="">
+              <img class="avatar rounded-full" :src="avatar" />
+            </span>
+          </div>
         </ul>
       </div>
     </nav>
@@ -418,9 +409,9 @@ export default {
 
 .avatar {
   vertical-align: middle;
-  width: 90px;
-  height: 70px;
-  border-radius: 5%;
+  width: 70px;
+  height: 55px;
+  border-radius: 100%;
 }
 </style>
 

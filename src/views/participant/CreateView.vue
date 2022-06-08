@@ -1,119 +1,150 @@
 <template>
   <div class="container my-4">
-    <form enctype="multipart/form-data" @submit.prevent="createParticipant">
-      <div class="card">
+    <h1>
+      <div class="pb-6">
         <div class="card-header text-white bg-orangewerplay">
           <h5 class="">Création d'un terrain</h5>
         </div>
+      </div>
+    </h1>
 
-        <div class="card-body">
-          <div class="row">
-            <div class="col-6">
-              <div>
-                <img class="preview img-fluid" :src="imageData" />
-              </div>
-            </div>
-
-            <div class="col-6">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-orangewerplay"
-                    >Adresse</span
-                  >
-                </div>
-                <input
-                  class="form-control"
-                  placeholder="Adresse"
-                  v-model="participant.nom"
-                  required
-                />
-              </div>
-
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-orangewerplay"
-                    >Terrain</span
-                  >
-                </div>
-                <div class="custom-file">
-                  <input
-                    type="file"
-                    class="custom-file-input"
-                    ref="file"
-                    id="file"
-                    @change="previewImage"
-                  />
-                  <label class="custom-file-label" for="file"
-                    >Sélectionner l'image</label
-                  >
-                </div>
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-orangewerplay"
-                    >Créé le</span
-                  >
-                </div>
-                <input
-                  type="date"
-                  class="form-control"
-                  v-model="participant.naissance"
-                  format="dd/mm/yyyy"
-                  required
-                />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-orangewerplay"
-                    >Ville</span
-                  >
-                </div>
-                <select class="custom-select" v-model="participant.nationalite">
-                  <option selected disabled>Sélectionner un ville</option>
-                  <option v-for="ville in listeville" :key="ville.nom">
-                    {{ ville.nom }}
-                  </option>
-                </select>
-              </div>
-              <br />
-
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-orangewerplay"
-                    >Sport</span
-                  >
-                </div>
-                <select class="custom-select" v-model="participant.sport">
-                  <option selected disabled>Sélectionner un ville</option>
-                  <option v-for="sport in listesport" :key="sport.nom">
-                    {{ sport.nom }}
-                  </option>
-                </select>
-              </div>
-              <br />
-            </div>
-          </div>
+    <form enctype="multipart/form-data" @submit.prevent="createParticipant">
+      <div class="flex items-center justify-center pb-4">
+        <div>
+          <img class="preview img-fluid" :src="imageData" />
         </div>
+      </div>
 
-        <div class="card-footer">
-          <button
-            type="submit"
-            class="
-              btn
-              float-left
-              border-2 border-orangewerplay
-              text-orangewerplay
-            "
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text text-white bg-orangewerplay"
+            >Terrain</span
           >
-            Créer
-          </button>
-          <button class="btn float-right bg-orangewerplay">
-            <router-link to="/participants">Annuler</router-link>
-          </button>
         </div>
+        <div class="custom-file">
+          <input
+            type="file"
+            class="custom-file-input"
+            ref="file"
+            id="file"
+            @change="previewImage"
+          />
+          <label class="custom-file-label" for="file"
+            >Sélectionner l'image</label
+          >
+        </div>
+      </div>
+
+      <br />
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text text-white bg-orangewerplay"
+            >Adresse</span
+          >
+        </div>
+        <input
+          class="form-control"
+          placeholder="Adresse"
+          v-model="participant.nom"
+          required
+        />
+      </div>
+      <br />
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text text-white bg-orangewerplay"
+            >RDV le</span
+          >
+        </div>
+        <input
+          type="date"
+          class="form-control"
+          v-model="participant.naissance"
+          format="dd/mm/yyyy"
+          required
+        />
+      </div>
+
+      <br />
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text text-white bg-orangewerplay"
+            >Catégorie d'âge</span
+          >
+        </div>
+        <select class="custom-select" v-model="participant.age">
+          <option selected disabled>
+            Sélectionner la catégorie d'âge accepté
+          </option>
+          <option v-for="age in listeage" :key="age.nom">
+            {{ age.nom }}
+          </option>
+        </select>
+      </div>
+
+      <br />
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text text-white bg-orangewerplay"
+            >Difficulté</span
+          >
+        </div>
+        <select class="custom-select" v-model="participant.difficulte">
+          <option selected disabled>Sélectionner la difficulté du match</option>
+          <option v-for="difficulte in listedifficulte" :key="difficulte.nom">
+            {{ difficulte.nom }}
+          </option>
+        </select>
+      </div>
+
+      <br />
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text text-white bg-orangewerplay"
+            >Ville</span
+          >
+        </div>
+        <select class="custom-select" v-model="participant.nationalite">
+          <option selected disabled>Sélectionner une ville</option>
+          <option v-for="ville in listeville" :key="ville.nom">
+            {{ ville.nom }}
+          </option>
+        </select>
+      </div>
+      <br />
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text text-white bg-orangewerplay"
+            >Sport</span
+          >
+        </div>
+        <select class="custom-select" v-model="participant.sport">
+          <option selected disabled>Sélectionner un ville</option>
+          <option v-for="sport in listesport" :key="sport.nom">
+            {{ sport.nom }}
+          </option>
+        </select>
+      </div>
+
+      <div class="pt-10">
+        <button
+          type="submit"
+          class="
+            btn
+            float-left
+            border-2 border-orangewerplay
+            text-orangewerplay
+          "
+        >
+          Créer
+        </button>
+        <button class="btn float-right bg-orangewerplay">
+          <router-link to="/participants">Annuler</router-link>
+        </button>
       </div>
     </form>
   </div>
@@ -151,6 +182,8 @@ export default {
       imageData: null, // Image prévisualisée
       listeville: [], // Liste des ville pour la nationalité du participant
       listesport: [], // Liste des sport pour la nationalité du participant
+      listeage: [], // Liste des age
+      listedifficulte: [], // Liste des difficulte
 
       participant: {
         // Le participant à créer
@@ -168,6 +201,10 @@ export default {
     this.getville();
     // Appel de la liste des sport
     this.getsport();
+    // Appel de la liste des age
+    this.getage();
+    // Appel de la liste des difficulte
+    this.getdifficulte();
   },
   methods: {
     async getville() {
@@ -211,6 +248,50 @@ export default {
           ...doc.data(),
         }));
         console.log("Liste des sport", this.listesport);
+      });
+    },
+
+    async getdifficulte() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document difficulte
+      const dbdifficulte = collection(firestore, "difficulte");
+      // Liste des participants triés
+      // query permet de faire une requête sur Firebase
+      // notement pour filtrer, trier ... des données
+      //orderBy permet de préciser sur quel élément trier, et dans quel ordre
+      // ici le nom du sport par ordre croissant (asc)
+      const q = query(dbdifficulte, orderBy("nom", "asc"));
+      // Récupération de la liste des sport à partir de la query
+      // La liste est synchronisée
+      await onSnapshot(q, (snapshot) => {
+        this.listedifficulte = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log("Liste des difficulte", this.listedifficulte);
+      });
+    },
+
+    async getage() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document sport
+      const dbage = collection(firestore, "age");
+      // Liste des participants triés
+      // query permet de faire une requête sur Firebase
+      // notement pour filtrer, trier ... des données
+      //orderBy permet de préciser sur quel élément trier, et dans quel ordre
+      // ici le nom du sport par ordre croissant (asc)
+      const q = query(dbage, orderBy("nom", "asc"));
+      // Récupération de la liste des sport à partir de la query
+      // La liste est synchronisée
+      await onSnapshot(q, (snapshot) => {
+        this.listeage = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log("Catégorie d'âge accépté", this.listeage);
       });
     },
 

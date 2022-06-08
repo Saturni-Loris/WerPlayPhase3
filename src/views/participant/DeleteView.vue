@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <form enctype="multipart/form-data " @submit.prevent="deleteParticipant">
-      <div class="card bg-dark">
-        <div class="card-header bg-bleunuit">
-          <h5 class="">Suppression d'un participant au festival</h5>
+      <div class="pt-6">
+        <div class="card-header text-white bg-orangewerplay">
+          <h5 class="">Suppression d'un match</h5>
         </div>
 
         <div class="card-body bg-white">
@@ -17,8 +17,8 @@
             <div class="col-6">
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-bleunuit"
-                    >Nom</span
+                  <span class="input-group-text text-white bg-orangewerplay"
+                    >Adresse</span
                   >
                 </div>
                 <input
@@ -28,25 +28,12 @@
                   disabled
                 />
               </div>
+
               <br />
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-bleunuit"
-                    >Prénom</span
-                  >
-                </div>
-                <input
-                  class="form-control"
-                  placeholder="Prénom de la personne"
-                  v-model="participant.prenom"
-                  disabled
-                />
-              </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-bleunuit"
-                    >Date naissance</span
+                  <span class="input-group-text text-white bg-orangewerplay"
+                    >Date du match</span
                   >
                 </div>
                 <input
@@ -57,19 +44,7 @@
                   disabled
                 />
               </div>
-              <br />
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text text-white bg-bleunuit"
-                    >ville</span
-                  >
-                </div>
-                <input
-                  class="form-control"
-                  v-model="participant.nationalite"
-                  disabled
-                />
-              </div>
+
               <br />
             </div>
           </div>
@@ -83,12 +58,12 @@
         <div class="card-footer bg-white">
           <button
             type="submit"
-            class="btn border-bleunuit text-bleunuit float-left"
+            class="btn float-left border-orangewerplay text-orangewerplay"
           >
             Supprimer
           </button>
-          <button class="btn text-white bg-bleunuit float-right">
-            <RouterLink to="/participants ">Cancel</RouterLink>
+          <button class="btn text-white float-right bg-orangewerplay">
+            <RouterLink to="/participants">Cancel</RouterLink>
           </button>
         </div>
       </div>

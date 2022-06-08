@@ -9,8 +9,11 @@ import FondateursView from '../views/FondateursView.vue'
 import MapsView from '../views/MapsView.vue'
 import MoncompteView from '../views/MoncompteView.vue'
 
+//admin
 import ListeView from '../views/admin/ListeView.vue'
 import SportView from '../views/admin/SportView.vue'
+import AgeView from '../views/admin/AgeView.vue'
+import DifficulteView from '../views/admin/DifficulteView.vue'
 
 
 //villes
@@ -33,12 +36,6 @@ import CreateParticipant from '../views/participant/CreateView.vue'
 import UpdateParticipant from '../views/participant/UpdateView.vue'
 import DeleteParticipant from '../views/participant/DeleteView.vue'
 
-//Participant
-import ListeTerrain from '../views/terrain/ListeView.vue'
-import CreateTerrain from '../views/terrain/CreateView.vue'
-import UpdateTerrain from '../views/terrain/UpdateView.vue'
-import DeleteTerrain from '../views/terrain/DeleteView.vue'
-
 
 import card from '../components/card.vue'
 
@@ -60,8 +57,12 @@ const router = createRouter({
     { path: '/maps', name: 'MapsView', component: MapsView },
     { path: '/moncompte', name: 'MoncompteView', component: MoncompteView },
 
+    //admin
     { path: '/ville', name: 'ListeView', component: ListeView },
     { path: '/sport', name: 'SportView', component: SportView },
+    { path: '/age', name: 'AgeView', component: AgeView },
+    { path: '/difficulte', name: 'DifficulteView', component: DifficulteView },
+
 
     //ville
     { path: '/montbeliard', name: 'MontbeliardView', component: MontbeliardView },
@@ -83,11 +84,6 @@ const router = createRouter({
     { path: '/UpdateParticipant/:id', name: 'UpdateParticipant', component: UpdateParticipant },
     { path: '/DeleteParticipant/:id', name: 'DeleteParticipant', component: DeleteParticipant },
 
-    //terrain
-    { path: '/terrain', name: 'ListeTerrain', component: ListeTerrain },
-    { path: '/createTerrain', name: 'CreateTerrain', component: CreateTerrain },
-    { path: '/UpdateTerrain/:id', name: 'UpdateTerrain', component: UpdateTerrain },
-    { path: '/DeleteTerrain/:id', name: 'DeleteTerrain', component: DeleteTerrain },
 
 
     { path: '/card', name: 'card', component: card },

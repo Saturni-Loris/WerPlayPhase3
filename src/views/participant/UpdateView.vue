@@ -96,6 +96,43 @@
                 </select>
               </div>
               <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text text-white bg-orangewerplay"
+                    >Age</span
+                  >
+                </div>
+                <select class="custom-select" v-model="participant.age">
+                  <option selected disabled>
+                    Sélectionner une catégorie d'âge
+                  </option>
+
+                  <option v-for="age in listeage" :key="age.nom">
+                    {{ age.nom }}
+                  </option>
+                </select>
+              </div>
+
+              <br />
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text text-white bg-orangewerplay"
+                    >Difficulté</span
+                  >
+                </div>
+                <select class="custom-select" v-model="participant.difficulte">
+                  <option selected disabled>
+                    Sélectionner une catégorie d'âge
+                  </option>
+
+                  <option
+                    v-for="difficulte in listedifficulte"
+                    :key="difficulte.nom"
+                  >
+                    {{ difficulte.nom }}
+                  </option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
@@ -157,6 +194,8 @@ export default {
       imageData: null, // Image prévisualisée
       listeville: [], // Liste des ville pour la nationalité du participant
       listesport: [], // Liste des sport pour la nationalité du participant
+      listeage: [], // Liste des age pour la nationalité du participant
+      listedifficulte: [], // Liste des difficulte pour la nationalité du participant
 
       participant: {
         // Le participant à créer
@@ -184,6 +223,11 @@ export default {
     this.getville();
     // Appel de la liste des sport
     this.getsport();
+    // Appel de la liste des ville
+    this.getage();
+    // Appel de la liste des age
+    this.getdifficulte();
+    // Appel de la liste des diffuclte
   },
 
   methods: {
@@ -304,6 +348,50 @@ export default {
       );
       // redirection sur la liste des participants
       this.$router.push("/participants");
+    },
+
+    async getdifficulte() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document difficulte
+      const dbdifficulte = collection(firestore, "difficulte");
+      // Liste des participants triés
+      // query permet de faire une requête sur Firebase
+      // notement pour filtrer, trier ... des données
+      //orderBy permet de préciser sur quel élément trier, et dans quel ordre
+      // ici le nom du sport par ordre croissant (asc)
+      const q = query(dbdifficulte, orderBy("nom", "asc"));
+      // Récupération de la liste des sport à partir de la query
+      // La liste est synchronisée
+      await onSnapshot(q, (snapshot) => {
+        this.listedifficulte = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log("Liste des difficulte", this.listedifficulte);
+      });
+    },
+
+    async getage() {
+      // Obtenir Firestore
+      const firestore = getFirestore();
+      // Base de données (collection)  document sport
+      const dbage = collection(firestore, "age");
+      // Liste des participants triés
+      // query permet de faire une requête sur Firebase
+      // notement pour filtrer, trier ... des données
+      //orderBy permet de préciser sur quel élément trier, et dans quel ordre
+      // ici le nom du sport par ordre croissant (asc)
+      const q = query(dbage, orderBy("nom", "asc"));
+      // Récupération de la liste des sport à partir de la query
+      // La liste est synchronisée
+      await onSnapshot(q, (snapshot) => {
+        this.listeage = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        console.log("Catégorie d'âge accépté", this.listeage);
+      });
     },
   },
 };

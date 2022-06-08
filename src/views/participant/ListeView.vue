@@ -1,77 +1,129 @@
 <template>
   <div class="card my-4 mx-2">
-    <div class="card-header text-white bg-orangewerplay">
-      <h5>
-        Liste des terrains de sports
-        <span class="float-right" title="Créer un nouveau terrain">
-          <router-link to="/createParticipant">
-            <i class="fa fa-plus fa-lg text-light"></i>
-          </router-link>
-        </span>
-      </h5>
+    <h1 class="text-dark p-8 text-3xl font-bold">
+      <span class="text-orangewerplay">Créer</span> vos
+      <span class="text-orangewerplay"> match ici</span>
+    </h1>
+
+    <div v-if="user == null">
+      <h6 class="alert alert-warning text-center" role="alert">
+        Vous devez être connecté pour créér un match !!
+      </h6>
+
+      <div class="flex flex-col items-center justify-center p-8">
+        <div class="">
+          <button
+            class="
+              text-white
+              md:w-62
+              rounded-2xl
+              bg-orangewerplay
+              py-2
+              px-16
+              font-bold
+              hover:no-underline
+              lg:w-72
+            "
+            type="button"
+          >
+            <RouterLink to="/moncompte">Créer un compte</RouterLink>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <div class="card-body table-responsive">
-      <table class="table text-rougewerplay">
-        <thead>
-          <tr>
-            <th scope="col" class="text-center">Terrain</th>
-            <th scope="col">Adresse</th>
-            <th scope="col">Ville</th>
-            <th scope="col">Sport</th>
-            <th scope="col">Créé le</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="part in listeParticipant" :key="part.id">
-            <td class="text-center">
-              <img
-                class="media-object imageSmall"
-                :src="part.photo"
-                :alt="part.prenom + ' ' + part.nom"
-              />
-            </td>
-            <td>
-              <b>{{ part.nom }}</b>
-            </td>
+    <div v-else>
+      <div class="flex flex-col items-center justify-center p-8">
+        <div class="">
+          <RouterLink to="/CreateParticipant">
+            <button
+              class="
+                text-white
+                md:w-62
+                rounded-2xl
+                bg-orangewerplay
+                py-2
+                px-16
+                font-bold
+                hover:no-underline
+                lg:w-72
+              "
+              type="button"
+            >
+              Créer un match
+            </button></RouterLink
+          >
+        </div>
+      </div>
 
-            <td>{{ part.nationalite }}</td>
+      <div class="card-header text-white bg-orangewerplay">
+        <h5>Liste des matchs</h5>
+      </div>
 
-            <td>{{ part.sport }}</td>
+      <div class="card-body table-responsive">
+        <table class="table text-rougewerplay">
+          <thead>
+            <tr>
+              <th scope="col" class="text-center">Terrain</th>
+              <th scope="col">Adresse</th>
+              <th scope="col">Ville</th>
+              <th scope="col">Sport</th>
+              <th scope="col">RDV le</th>
 
-            <td>{{ dateFr(part.naissance) }}</td>
-            <td>
-              <span
-                title="Supprimer le participant"
-                class="bg-bleunuit mr-2 rounded-lg p-1"
-              >
-                <RouterLink
-                  :to="{ name: 'DeleteParticipant', params: { id: part.id } }"
-                >
-                  <i class="fa fa-times fa-lg text-rougewerplay"></i>
-                </RouterLink>
-              </span>
-              <span
-                title="Modifier le participant"
-                class="bg-bleunuit mr-2 rounded-lg p-1"
-              >
-                <!-- Pour passer un paramètre dans la navigation :
+              <th scope="col">Age</th>
+              <th scope="col">Difficulté</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="part in listeParticipant" :key="part.id">
+              <td class="text-center">
+                <img
+                  class="media-object imageSmall"
+                  :src="part.photo"
+                  :alt="part.prenom + ' ' + part.nom"
+                />
+              </td>
+              <td>
+                <b>{{ part.nom }}</b>
+              </td>
+
+              <td>{{ part.nationalite }}</td>
+
+              <td>{{ part.sport }}</td>
+
+              <td>{{ dateFr(part.naissance) }}</td>
+
+              <td>{{ part.age }}</td>
+
+              <td>{{ part.difficulte }}</td>
+              <td>
+                <span title="Supprimer le participant" class="mr-2">
+                  <RouterLink
+                    :to="{ name: 'DeleteParticipant', params: { id: part.id } }"
+                  >
+                    <i class="fa fa-times fa-lg text-rougewerplay"></i>
+                  </RouterLink>
+                </span>
+                <span title="Modifier le participant" class="mr-2">
+                  <!-- Pour passer un paramètre dans la navigation :
                                 On utilise le nom de la route
                                 l'attribut params, permet de préciser le nom du paramètre (id) 
                                 et sa valeur (part.id, id du participant) 
                                 -->
-                <RouterLink
-                  :to="{ name: 'UpdateParticipant', params: { id: part.id } }"
-                >
-                  <i class="fa fa-edit fa-lg text-rougewerplay"></i>
-                </RouterLink>
-              </span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                  <RouterLink
+                    :to="{ name: 'UpdateParticipant', params: { id: part.id } }"
+                  >
+                    <i class="fa fa-edit fa-lg text-rougewerplay"></i>
+                  </RouterLink>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
+
   <div class="pt-52"></div>
 </template>
 
@@ -98,10 +150,14 @@ import {
   uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
+// Fonction authentification
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+
 export default {
   name: "ListeView",
   data() {
     return {
+      user: null, // User connecté
       listeParticipant: [], // Liste des participants
     };
   },
@@ -109,8 +165,24 @@ export default {
     // Montage de la vue
     // Appel de la liste des participants
     this.getParticipants();
+    // Appel de la liste des users (Firestore)
+    this.getUsers();
   },
   methods: {
+    // Les fonctions
+    // obtenir les utilisateurs de users
+    async getUsers() {
+      // Obtenir les inofrmations du user connecté
+      await getAuth().onAuthStateChanged(
+        function (user) {
+          if (user) {
+            // Récupération du user connecté
+            this.user = user;
+          }
+        }.bind(this)
+      );
+    },
+
     async getParticipants() {
       // Obtenir Firestore
       const firestore = getFirestore();
