@@ -11,13 +11,18 @@
     "
   >
     <div class="p-3 pt-12">
-      <RouterLink to="/montbeliard"
+      <RouterLink
+        class="hover:text-rougewerplay hover:no-underline"
+        to="/montbeliard"
         ><card rue="Avenue de Marc" adresse="Montbéliard" image="/amifoot.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <RouterLink to="/valentigney">
+      <RouterLink
+        class="hover:text-rougewerplay hover:no-underline"
+        to="/valentigney"
+      >
         <card
           rue="30 rue etienne oehmichen"
           adresse="Valentigney"
@@ -26,13 +31,19 @@
     </div>
 
     <div class="p-3 pt-12">
-      <RouterLink to="/Voujeaucourt">
+      <RouterLink
+        class="hover:text-rougewerplay hover:no-underline"
+        to="/Voujeaucourt"
+      >
         <card rue="Rue de la Paix" adresse="Voujeaucourt" image="/city.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <RouterLink to="/trevenans">
+      <RouterLink
+        class="hover:text-rougewerplay hover:no-underline"
+        to="/trevenans"
+      >
         <card rue="Rue Machéral" adresse="Trevenans" image="/basket.png"
       /></RouterLink>
     </div>
@@ -47,13 +58,16 @@
     </div>
 
     <div class="p-3 pt-12">
-      <RouterLink to="/bart">
+      <RouterLink class="hover:text-rougewerplay hover:no-underline" to="/bart">
         <card rue="Rue de la Moule" adresse="Bart" image="/panierbasket.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <RouterLink to="/audincourt">
+      <RouterLink
+        class="hover:text-rougewerplay hover:no-underline"
+        to="/audincourt"
+      >
         <card
           rue="Avenue des fleurs"
           adresse="Audincourt"
@@ -62,7 +76,10 @@
     </div>
 
     <div class="p-3 pt-12">
-      <RouterLink to="/hericourt">
+      <RouterLink
+        class="hover:text-rougewerplay hover:no-underline"
+        to="/hericourt"
+      >
         <card
           rue="Avenue de l'aveugle"
           adresse="Héricourt"
@@ -71,13 +88,19 @@
     </div>
 
     <div class="p-3 pt-12">
-      <RouterLink to="/delle">
+      <RouterLink
+        class="hover:text-rougewerplay hover:no-underline"
+        to="/delle"
+      >
         <card rue="Rue-Haute" adresse="Delle" image="/tapeballedefoot.png"
       /></RouterLink>
     </div>
 
     <div class="p-3 pt-12">
-      <RouterLink to="/courcelle">
+      <RouterLink
+        class="hover:text-rougewerplay hover:no-underline"
+        to="/courcelle"
+      >
         <card rue="Avenue Basse" adresse="Courcelle" image="/passefoot.png"
       /></RouterLink>
     </div>

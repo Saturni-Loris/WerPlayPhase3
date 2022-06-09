@@ -16,23 +16,27 @@
     "
   >
     <div class="p-3 pt-12">
-      <card
-        rue="Avenue de l'église"
-        adresse="Seloncourt"
-        image="/metundunk.png"
-      />
+      <a class="hover:text-rougewerplay hover:no-underline" href="/seloncourt">
+        <card
+          rue="Avenue de l'église"
+          adresse="Seloncourt"
+          image="/metundunk.png"
+      /></a>
     </div>
 
     <div class="p-3 pt-12">
-      <card rue="Rue de la Moule" adresse="Bart" image="/panierbasket.png" />
+      <a class="hover:text-rougewerplay hover:no-underline" href="/bart">
+        <card rue="Rue de la Moule" adresse="Bart" image="/panierbasket.png"
+      /></a>
     </div>
 
     <div class="p-3 pt-12">
-      <card
-        rue="Avenue des fleurs"
-        adresse="Audincourt"
-        image="/panierdebasket.png"
-      />
+      <a class="hover:text-rougewerplay hover:no-underline" href="/audincourt">
+        <card
+          rue="Avenue des fleurs"
+          adresse="Audincourt"
+          image="/panierdebasket.png"
+      /></a>
     </div>
   </div>
 
@@ -49,7 +53,11 @@
             class="text-white rounded-2xl bg-orangewerplay py-2 px-16 font-bold"
             type="button"
           >
-            <RouterLink to="/contact">Ecrivez nous</RouterLink>
+            <RouterLink
+              class="hover:text-rougewerplay hover:no-underline"
+              to="/contact"
+              >Ecrivez nous</RouterLink
+            >
           </button>
         </div>
       </div>
@@ -176,7 +184,11 @@
           "
           type="button"
         >
-          <RouterLink to="/participants">Rejoindre un match</RouterLink>
+          <RouterLink
+            class="hover:text-rougewerplay hover:no-underline"
+            to="/participants"
+            >Rejoindre un match</RouterLink
+          >
         </button>
       </div>
     </div>
@@ -195,7 +207,11 @@
           "
           type="button"
         >
-          <RouterLink to="/participants">Créer un match</RouterLink>
+          <RouterLink
+            class="hover:text-rougewerplay hover:no-underline"
+            to="/participants"
+            >Créer un match</RouterLink
+          >
         </button>
       </div>
     </div>

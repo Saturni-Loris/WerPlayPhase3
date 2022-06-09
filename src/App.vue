@@ -57,8 +57,6 @@ import Card from "./components/card.vue";
           </li>
 
           <li class="nav-item dropdown">
-            <hr class="text-gray-400 my-2 border-t-2" />
-
             <a
               class="nav-link dropdown-toggle"
               href="#"

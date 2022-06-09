@@ -21,12 +21,15 @@
               py-2
               px-16
               font-bold
-              hover:no-underline
               lg:w-72
             "
             type="button"
           >
-            <RouterLink to="/moncompte">Créer un compte</RouterLink>
+            <RouterLink
+              class="hover:text-rougewerplay hover:no-underline"
+              to="/moncompte"
+              >Créer un compte</RouterLink
+            >
           </button>
         </div>
       </div>
@@ -45,7 +48,6 @@
                 py-2
                 px-16
                 font-bold
-                hover:no-underline
                 lg:w-72
               "
               type="button"
