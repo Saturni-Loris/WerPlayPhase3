@@ -123,7 +123,7 @@
           >
         </div>
         <select class="custom-select" v-model="participant.sport">
-          <option selected disabled>Sélectionner un ville</option>
+          <option selected disabled>Sélectionner une ville</option>
           <option v-for="sport in listesport" :key="sport.nom">
             {{ sport.nom }}
           </option>
