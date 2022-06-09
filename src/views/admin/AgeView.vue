@@ -185,7 +185,7 @@ export default {
       const dbage = collection(firestore, "age");
       // Liste des age synchronisée
       const query = await onSnapshot(dbage, (snapshot) => {
-        //console.log("query", query);
+        console.log("query", query);
         //  Récupération des résultats dans listeageSynchro
         // On utilse map pour récupérer l'intégralité des données renvoyées
         // on identifie clairement le id du document
@@ -194,7 +194,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        //console.log("listeage", this.listeage);
+        console.log("listeage", this.listeage);
       });
     },
 
@@ -209,7 +209,7 @@ export default {
       const docRef = await addDoc(dbage, {
         nom: this.nom,
       });
-      //console.log("document créé avec le id : ", docRef.id);
+      console.log("document créé avec le id : ", docRef.id);
     },
 
     async updateage(age) {

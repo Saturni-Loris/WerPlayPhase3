@@ -186,7 +186,7 @@ export default {
       const dbdifficulte = collection(firestore, "difficulte");
       // Liste des difficulte synchronisée
       const query = await onSnapshot(dbdifficulte, (snapshot) => {
-        //console.log("query", query);
+        console.log("query", query);
         //  Récupération des résultats dans listedifficulteSynchro
         // On utilse map pour récupérer l'intégralité des données renvoyées
         // on identifie clairement le id du document
@@ -195,7 +195,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        //console.log("listedifficulte", this.listedifficulte);
+        console.log("listedifficulte", this.listedifficulte);
       });
     },
 
@@ -210,7 +210,7 @@ export default {
       const docRef = await addDoc(dbdifficulte, {
         nom: this.nom,
       });
-      //console.log("document créé avec le id : ", docRef.id);
+      console.log("document créé avec le id : ", docRef.id);
     },
 
     async updatedifficulte(difficulte) {

@@ -338,13 +338,13 @@ export default {
 
     emitter.on("connectUser", (e) => {
       this.user = e.user;
-      //console.log("App => Rececption user connecté", this.user);
+      console.log("App => Rececption user connecté", this.user);
       this.getUserInfo(this.user);
     });
 
     emitter.on("deConnectUser", (e) => {
       this.user = e.user;
-      //console.log("App => Reception user déconnecté", this.user);
+      console.log("App => Reception user déconnecté", this.user);
       this.userInfo = null;
       this.name = "Invité de WerPlay";
       this.avatar = null;
@@ -383,7 +383,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        //console.log("userInfo", this.userInfo);
+        console.log("userInfo", this.userInfo);
         // userInfo étant un tableau, onn récupère
         // ses informations dans la 1° cellule du tableau : 0
         this.name = this.userInfo[0].login;
@@ -397,7 +397,7 @@ export default {
             this.avatar = url;
           })
           .catch((error) => {
-            //console.log("erreur downloadUrl", error);
+            console.log("erreur downloadUrl", error);
           });
       });
     },

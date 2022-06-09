@@ -121,7 +121,7 @@ export default {
     // Récupération du id passé en paramètre
     // On utilise le id passé par la route
     // via la variable système $route de la vue
-    //console.log("id participant", this.$route.params.id);
+    console.log("id participant", this.$route.params.id);
     // Recherche participant concerné
     this.getParticipant(this.$route.params.id);
   },

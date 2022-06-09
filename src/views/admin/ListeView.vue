@@ -186,7 +186,7 @@ export default {
       const dbVille = collection(firestore, "ville");
       // Liste des ville synchronisée
       const query = await onSnapshot(dbVille, (snapshot) => {
-        //console.log("query", query);
+        console.log("query", query);
         //  Récupération des résultats dans listeVilleSynchro
         // On utilse map pour récupérer l'intégralité des données renvoyées
         // on identifie clairement le id du document
@@ -195,7 +195,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        //console.log("listeville", this.listeville);
+        console.log("listeville", this.listeville);
       });
     },
 
@@ -210,7 +210,7 @@ export default {
       const docRef = await addDoc(dbVille, {
         nom: this.nom,
       });
-      //console.log("document créé avec le id : ", docRef.id);
+      console.log("document créé avec le id : ", docRef.id);
     },
 
     async updateVille(ville) {

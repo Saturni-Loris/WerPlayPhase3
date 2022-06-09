@@ -225,7 +225,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        //console.log("Liste des ville", this.listeville);
+        console.log("Liste des ville", this.listeville);
       });
     },
 
@@ -247,7 +247,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        //console.log("Liste des sport", this.listesport);
+        console.log("Liste des sport", this.listesport);
       });
     },
 
@@ -269,7 +269,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        //console.log("Liste des difficulte", this.listedifficulte);
+        console.log("Liste des difficulte", this.listedifficulte);
       });
     },
 
@@ -291,7 +291,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        //console.log("Catégorie d'âge accépté", this.listeage);
+        console.log("Catégorie d'âge accépté", this.listeage);
       });
     },
 
@@ -328,7 +328,7 @@ export default {
       // Upload de l'image sur le Cloud Storage
       await uploadString(refStorage, this.imageData, "data_url").then(
         (snapshot) => {
-          //console.log("Uploaded a base64 string");
+          console.log("Uploaded a base64 string");
 
           // Création du participant sur le Firestore
           const db = getFirestore();
