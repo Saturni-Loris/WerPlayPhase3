@@ -41,17 +41,14 @@ import Card from "./components/card.vue";
               <RouterLink to="/participants">Créer un match</RouterLink>
             </div>
           </li>
-          <hr class="text-gray-400 my-2 border-t-2" />
           <li class="nav-item">
             <div class="nav-link">
               <RouterLink to="/matchspopulaire">Matchs populaires</RouterLink>
             </div>
           </li>
 
-          <hr class="text-gray-400 my-2 border-t-2" />
-
           <li class="nav-item">
-            <div class="nav-link">
+            <div class="nav-link" v-if="isAdmin">
               <RouterLink to="/chat">Chat</RouterLink>
             </div>
           </li>

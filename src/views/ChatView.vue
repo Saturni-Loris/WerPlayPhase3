@@ -9,6 +9,54 @@
       <h6 class="alert alert-warning text-center" role="alert">
         Vous devez être connecté pour utiliser le Chat !!
       </h6>
+
+      <div class="flex flex-col items-center justify-center p-8">
+        <div class="">
+          <button
+            class="
+              text-white
+              md:w-62
+              rounded-2xl
+              bg-orangewerplay
+              py-2
+              px-16
+              font-bold
+              lg:w-72
+            "
+            type="button"
+          >
+            <RouterLink
+              class="hover:text-rougewerplay hover:no-underline"
+              to="/moncompte"
+              >Créer un compte</RouterLink
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-center">
+        <div class="">
+          <button
+            class="
+              md:w-62
+              rounded-2xl
+              border-2 border-orangewerplay
+              py-2
+              px-16
+              font-bold
+              text-orangewerplay
+              lg:w-72
+            "
+            type="button"
+          >
+            <RouterLink
+              class="hover:text-rougewerplay hover:no-underline"
+              to="/moncompte"
+              >Se connecter</RouterLink
+            >
+          </button>
+        </div>
+      </div>
     </div>
     <div v-else>
       <div class="input-group mb-3">
