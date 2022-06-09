@@ -195,7 +195,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log("listesport", this.listesport);
+        //console.log("listesport", this.listesport);
       });
     },
 

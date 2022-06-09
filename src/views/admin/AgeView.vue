@@ -194,7 +194,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log("listeage", this.listeage);
+        //console.log("listeage", this.listeage);
       });
     },
 

@@ -195,7 +195,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log("listeville", this.listeville);
+        //console.log("listeville", this.listeville);
       });
     },
 

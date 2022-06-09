@@ -195,7 +195,7 @@ export default {
           id: doc.id,
           ...doc.data(),
         }));
-        console.log("listedifficulte", this.listedifficulte);
+        //console.log("listedifficulte", this.listedifficulte);
       });
     },
 
